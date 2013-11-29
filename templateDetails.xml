@@ -1,0 +1,98 @@
+<?php xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="2.5" type="template" method="upgrade">
+	<name>Master Bootstrap</name>
+	<creationDate>01 OCT 2013</creationDate>
+	<author>Gonzalo Suez</author>
+	<copyright>Copyright © 2013 gsuez.cl</copyright>
+	<authorEmail>info@gsuez.cl</authorEmail>
+	<authorUrl>http://www.gsuez.cl</authorUrl>
+	<version>Stable 1.0</version>
+	<description><![CDATA[ 
+		<h1>Master Bootstrap for Joomla! 3.0</h1>
+		<p>Un template para trabajar desde 0 con todas las ventajas de Twitter Bootstrap V 3.0.</p>
+		<p>A template for work from scrath, with all advantages of Twitter Bootstrap.</p>
+		<p>Created by <a href="http://www.gsuez.cl" target="_blank">Gonzalo Suez </a></p>
+	]]></description>
+	<files>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>includes</folder>
+		<folder>js</folder>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>index.php</filename>
+		<filename>offline.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+    <positions>
+		<position>top</position>
+        <position>breadcrumbs</position>
+		<position>navigation</position>
+		<position>fullwidth</position>
+        <position>showcase</position>
+		<position>feature</position>
+        <position>left</position>
+        <position>right</position>
+        <position>content-top</position>
+        <position>content-bottom</position>
+        <position>bottom</position>    
+        <position>footer</position>
+		<position>debug</position>
+	</positions>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+<!-- WIDTH MAIN-->
+	
+		<field name="leftColumnWidth" type="list" default="3" label="Left Column Width" description="Choose a width for your left column">
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</field>
+				
+			<field name="rightColumnWidth" type="list" default="3" label="Right Column Width" description="Choose a width for your right column">
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</field>
+				
+
+				<!-- MODERNIZR-->
+				<field name="modernizr" type="radio" default="0" 
+					label="Modernizr" 
+					description="Enable JavaScript modernizr.js in head">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<!-- FONT-AWESOME -->
+				<field name="fontawesome" type="radio" default="0" 
+					label="Font Awesome" 
+					description="Enable Font Awesome for better icons in Bootstrap">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<!-- PIE-->
+				<field name="pie" type="radio" default="0" 
+					label="PIE" 
+					description="Enable PIE (CSS3 for IE 9+8)">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+	<!-- LOGO-->
+	<fieldset  name="logo" type="upload_func" label="Logo">
+			<field name="logo_file" type="media" label="Select your logo:"></field>
+			<field name="logo_link" type="text" label="Logo link:"  description="Example: http://www.ordasoft.com" default="index.php"></field>
+			<field name="logo_width" type="text" label="Logo width:" description="Example: 90" default="173"></field>
+			<field name="logo_height" type="text" label="Logo height:" description="Example: 90" default="26"></field>
+		</fieldset>
+		</fields>
+	</config>
+</extension>
