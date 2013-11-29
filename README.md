@@ -6,8 +6,23 @@ This template is based in Twitter Bootstrap 3, for Joomla! 3.x
 
 <h3>Some features:</h3>
 <ul>
-<li>Bootstrap 3 based</li>
-<li>1200px content</li>
-<li>modules organized by style css</li>
-<li>fixed footer</li>
+<li>100% Bootstrap 3.0</li>
+<li>HTML 5</li>
+<li>Modernizr</li>
+<li>Font Awesome</li>
+<li>PIE for IE</li>
+<li>Upload Logo from Administrator</li>
+<li>Fast and Light</li>
+<li>Positions 100% managed for class CSS</li>
+<li>Left and Right Modules with independent proportions!</li>
+<li>A Fullwidth position for your sliders!</li>
+<li>Sticky Footer by default!</li>
 </ul>
+
+
+
+
+
+
+
+
