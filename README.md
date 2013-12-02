@@ -19,7 +19,7 @@ This template is based in Twitter Bootstrap 3, for Joomla! 3.x
 <li>Sticky Footer by default!</li>
 </ul>
 
-
+<h4>Attention: this version is stable, but under development</h4>
 
 
 
