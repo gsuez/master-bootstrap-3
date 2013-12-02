@@ -1,7 +1,7 @@
 <?php 
 	/*------------------------------------------------------------------------
 # author    Gonzalo Suez
-# copyright Copyright © 2013 gsuez.cl. All rights reserved.
+# copyright Copyright ï¿½ 2013 gsuez.cl. All rights reserved.
 # @license  http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 # Website   http://www.gsuez.cl
 -------------------------------------------------------------------------*/
@@ -19,8 +19,11 @@ $doc   = JFactory::getDocument();
 	<script src="<?php echo $this->baseurl ?>/media/jui/js/html5.js"></script>
 <![endif]-->
 </head>
-<body class="contentpane modal">
-	<jdoc:include type="message" />
-	<jdoc:include type="component" />
+<body id="print">
+  <div id="overall">
+    <jdoc:include type="message" />
+    <jdoc:include type="component" />
+  </div>
+  <?php if ($_GET['print'] == '1') echo '<script type="text/javascript">window.print();</script>'; ?>
 </body>
 </html>
