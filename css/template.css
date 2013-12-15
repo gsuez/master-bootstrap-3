@@ -136,6 +136,54 @@ body {
     text-align: inherit;
 }
 
+.cols-1 {
+    display: block;
+    float: none !important;
+    margin: 0 !important;
+}
+.cols-2 .column-1 {
+    float: left;
+    width: 46%;
+}
+.cols-2 .column-2 {
+    float: right;
+    margin: 0;
+    width: 46%;
+}
+.cols-3 .column-1 {
+    float: left;
+    margin-right: 4%;
+    padding: 0 5px;
+    width: 29%;
+}
+.cols-3 .column-2 {
+    float: left;
+    margin-left: 0;
+    padding: 0 5px;
+    width: 29%;
+}
+.cols-3 .column-3 {
+    float: right;
+    padding: 0 5px;
+    width: 29%;
+}
+.items-row {
+    margin-bottom: 10px !important;
+    overflow: hidden;
+}
+.column-1, .column-2, .column-3 {
+    padding: 10px 5px;
+}
+.column-2 {
+    margin-left: 40%;
+    width: 55%;
+}
+.column-3 {
+    width: 30%;
+}
+.blog-more {
+    padding: 10px 5px;
+}
 /* Media Queries */
 /* Retina */
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {
