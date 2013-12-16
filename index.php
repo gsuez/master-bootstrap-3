@@ -1,7 +1,7 @@
 <?php  
 	/*------------------------------------------------------------------------
 # author    Gonzalo Suez
-# copyright Copyright © 2013 gsuez.cl. All rights reserved.
+# copyright Copyright Â© 2013 gsuez.cl. All rights reserved.
 # @license  http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 # Website   http://www.gsuez.cl
 -------------------------------------------------------------------------*/
@@ -117,7 +117,7 @@ include 'includes/head.php';
 </div>
 </div>
 <?php endif; ?>
-<div id="main" class="main-box">
+<div class="main-box">
 <jdoc:include type="component" />
 <jdoc:include type="message" />	
 </div>
@@ -149,7 +149,7 @@ include 'includes/head.php';
 <?php  endif; ?>
 <div id="push"></div>
 <!-- bottom -->
-</div></div>
+</div>
 <!-- footer -->
 <?php  if($this->countModules('footer')) : ?>
 <div id="footer">
@@ -161,7 +161,7 @@ include 'includes/head.php';
 </div>
 <?php  endif; ?>
 <!-- footer -->
-</div>
+
 <jdoc:include type="modules" name="debug" />	
 <!-- page -->	
 <!-- JS -->
