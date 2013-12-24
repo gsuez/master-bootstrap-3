@@ -24,6 +24,5 @@ $doc   = JFactory::getDocument();
     <jdoc:include type="message" />
     <jdoc:include type="component" />
   </div>
-  <?php if ($_GET['print'] == '1') echo '<script type="text/javascript">window.print();</script>'; ?>
 </body>
 </html>
