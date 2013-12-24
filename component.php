@@ -9,7 +9,8 @@ defined('_JEXEC') or die;
 
 $app   = JFactory::getApplication();
 $doc   = JFactory::getDocument();
-
+// Add Stylesheets
+$doc->addStyleSheet('templates/'.$this->template.'/css/template.css');
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -26,3 +27,4 @@ $doc   = JFactory::getDocument();
   </div>
 </body>
 </html>
+
