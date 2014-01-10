@@ -124,9 +124,11 @@ include 'includes/head.php';
 <!-- Below Content Module Position -->	
 <?php if($this->countModules('content-bottom')) : ?>
 <div id="content-bottom">
+<div class="row">
 <jdoc:include type="modules" name="content-bottom" style="block" />	
 </div>
 <?php endif; ?>
+</div>
 </div>
 <!-- Right -->
 <?php if($this->countModules('right')) : ?>
