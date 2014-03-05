@@ -127,8 +127,8 @@ include 'includes/head.php';
 <div class="row">
 <jdoc:include type="modules" name="content-bottom" style="block" />	
 </div>
-<?php endif; ?>
 </div>
+<?php endif; ?>
 </div>
 <!-- Right -->
 <?php if($this->countModules('right')) : ?>
