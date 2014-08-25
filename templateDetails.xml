@@ -89,7 +89,7 @@
 	<!-- LOGO-->
 	<fieldset  name="logo" type="upload_func" label="Logo">
 			<field name="logo_file" type="media" label="Select your logo:"></field>
-			<field name="logo_link" type="text" label="Logo link:"  description="Example: http://www.ordasoft.com" default="index.php"></field>
+			<field name="logo_link" type="text" label="Logo link:"  description="Example: http://www.masterbootstrap.com" default="index.php"></field>
 			<field name="logo_width" type="text" label="Logo width:" description="Example: 90" default="173"></field>
 			<field name="logo_height" type="text" label="Logo height:" description="Example: 90" default="26"></field>
 		</fieldset>
