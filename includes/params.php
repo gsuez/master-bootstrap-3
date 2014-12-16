@@ -1,7 +1,7 @@
 <?php
 	/*------------------------------------------------------------------------
 # author    Gonzalo Suez
-# copyright Copyright © 2013 gsuez.cl. All rights reserved.
+# copyright Copyright Â© 2013 gsuez.cl. All rights reserved.
 # @license  http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 # Website   http://www.gsuez.cl
 -------------------------------------------------------------------------*/
@@ -35,6 +35,7 @@ $active = $app->getMenu()->getActive();
 $pageclass = $params->get('pageclass_sfx');
 $tpath = $this->baseurl.'/templates/'.$this->template;
 // Parameter
+$frontpageshow = $this->params->get('frontpageshow', 0);
 $modernizr = $this->params->get('modernizr');
 $fontawesome = $this->params->get('fontawesome');
 $pie = $this->params->get('pie');
