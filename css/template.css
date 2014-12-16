@@ -38,6 +38,12 @@ img {
 	margin-bottom:20px;
 }
 
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    outline: medium none;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+    outline: medium none;
+}
 #main .main-box {
     background: none repeat scroll 0 0 #FFFFFF;
     border: 0px solid #E5E5E5;/* border 1, if you have front component*/
@@ -165,13 +171,14 @@ body {
 
 /* Set the fixed height of the footer here */
 #footer {
-  height: 60px;
+  height: 80px;
   background-color: #f5f5f5;
 }
 
 #footer .moduletable {
     background: transparent;
     border: 0;
+    margin-bottom: 0;
 }
 
 /* LAYOUT */
