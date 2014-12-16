@@ -62,8 +62,11 @@
 					<option value="4">4</option>
 					<option value="5">5</option>
 				</field>
-				
-
+					<!-- SHOW FRONTPAGE-->	
+			<field name="frontpageshow" type="radio" class="btn-group" default="1" label="Show FrontPage Articles" description="Show FrontPage Articles">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
 				<!-- MODERNIZR-->
 				<field name="modernizr" type="radio" default="0" 
 					label="Modernizr" 
