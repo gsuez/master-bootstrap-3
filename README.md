@@ -2,7 +2,7 @@ master-bootstrap
 =======================
 Created by Gonzalo Suez. See the official site for more info: http://www.masterbootstrap.com
 
-This template is based in Twitter Bootstrap 3, for Joomla! 3.x
+This template is based in Twitter Bootstrap 3, for Joomla! 3.x. 
 
 <h3>Some features:</h3>
 <ul>
@@ -18,6 +18,7 @@ This template is based in Twitter Bootstrap 3, for Joomla! 3.x
 <li>Left and Right Modules with independent proportions!</li>
 <li>A Fullwidth position for your sliders!</li>
 <li>Sticky Footer by default!</li>
+<li>Hide front content option, from admin!</li>
 </ul>
 
 <h4>Attention: this version is stable, but under development</h4>
