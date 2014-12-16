@@ -117,10 +117,31 @@ include 'includes/head.php';
 </div>
 </div>
 <?php endif; ?>
-<div class="main-box">
+<!-- Front page show or hide -->    
+<?php
+$app = JFactory::getApplication();
+$menu = $app->getMenu();
+						
+if ($frontpageshow){ 
+// show on all pages
+?>
+<div id="main-box">
 <jdoc:include type="component" />
-<jdoc:include type="message" />        
 </div>
+<?php 
+}
+else {
+if ($menu->getActive() !== $menu->getDefault()) {
+// show on all pages but the default page
+?>
+<div id="main-box">
+<jdoc:include type="component" />
+</div>
+<?php
+} 
+}
+?>	
+<!-- Front page show or hide -->    		
 <!-- Below Content Module Position -->        
 <?php if($this->countModules('content-bottom')) : ?>
 <div id="content-bottom">
