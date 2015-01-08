@@ -1,7 +1,7 @@
 <?php
 	/*------------------------------------------------------------------------
 # author    Gonzalo Suez
-# copyright Copyright © 2013 gsuez.cl. All rights reserved.
+# copyright Â© 2013 gsuez.cl. All rights reserved.
 # @license  http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 # Website   http://www.gsuez.cl
 -------------------------------------------------------------------------*/
