@@ -98,14 +98,12 @@
 					description="Select Load jQuery">
 						<option value="0">Not Load</option>
 						<option value="1">Load Locally</option>
-						<option value="2">Load from CDN</option>
 				</field>
 				<field name="loadBootstrap" type="list" default="1"
 					label="Load Bootstrap"
 					description="Select Load Bootstrap">
 						<option value="0">Not Load</option>
 						<option value="1">Load Locally</option>
-						<option value="2">Load from CDN</option>
 				</field>
 			</fieldset>
 			<!-- LOGO-->
