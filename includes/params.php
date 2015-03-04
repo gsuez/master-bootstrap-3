@@ -30,7 +30,6 @@
 	$doc->addStyleSheet('templates/'.$this->template.'/css/navbar.css');
 	$doc->addStyleSheet('templates/'.$this->template.'/css/bootstrap.min.css');
 	$doc->addStyleSheet('templates/'.$this->template.'/css/template.css');
-	$doc->addStyleSheet('templates/'.$this->template.'/css/icons.css');
 	// Remove
 	unset($doc->_scripts[JURI::root(true) . '/media/system/js/mootools-more.js']);
 	unset($doc->_scripts[JURI::root(true) . '/media/system/js/mootools-core.js']);
