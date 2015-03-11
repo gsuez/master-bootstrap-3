@@ -128,6 +128,7 @@
 			// show on all pages but the default page
 			?>
 <div id="main-box">
+<jdoc:include type="message" />
 <jdoc:include type="component" />
 </div>
 <?php
@@ -179,69 +180,7 @@
 <jdoc:include type="modules" name="debug" />        
 <!-- page -->        
 <!-- JS -->
-<script type="text/javascript">
-(function($){
-$(document).ready(function(){
-// dropdown
-if ($('.parent').children('ul').length > 0) {
-$('.parent').addClass('dropdown');
-$('.parent > a').addClass('dropdown-toggle');
-$('.parent > a').attr('data-toggle', 'dropdown');
-$('.parent > a').append('<b class="caret"></b>');
-$('.parent > ul').addClass('dropdown-menu');
-}
-});
-})(jQuery);
-</script>
-<!-- Fix hide dropdown -->
-<script type="text/javascript">
-if (MooTools != undefined) {
-    var mHide = Element.prototype.hide;
-    Element.implement({
-        hide: function() {
-                if (this.hasClass("deeper")) {
-                    return this;
-                }
-                mHide.apply(this, arguments);
-            }
-    });
-}
-</script>
-<!-- Fix hide dropdown -->
-<script type="text/javascript">
-jQuery(function($){
-    $('.dropdown-menu input, .dropdown-menu label').click(function(e) {
-        e.stopPropagation();
-    });
-	});
-</script>
-<script type="text/javascript">
-		jQuery( document ).ready(function() {
-jQuery('.tooltip').tooltip({
-    html: true
-});
-});
-    </script>
-
-<!-- To Top -->
-        <script>            
-			jQuery(document).ready(function() {
-				var offset = 220;
-				var duration = 500;
-				jQuery(window).scroll(function() {
-					if (jQuery(this).scrollTop() > offset) {
-						jQuery('.back-to-top').fadeIn(duration);
-					} else {
-						jQuery('.back-to-top').fadeOut(duration);
-					}
-				});
-				jQuery('.back-to-top').click(function(event) {
-					event.preventDefault();
-					jQuery('html, body').animate({scrollTop: 0}, duration);
-					return false;
-				})
-			});
-		</script>
+<script type="text/javascript" src="<?php echo $tpath; ?>/js/template.js"></script>
 <!-- JS -->
 </body>
 </html>

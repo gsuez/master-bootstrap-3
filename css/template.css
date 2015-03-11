@@ -120,13 +120,18 @@ input[type="reset"],
 input[type="submit"],
 input[type="radio"],
 input[type="checkbox"] {cursor: pointer }
-.contact-form .uneditable-input,
-.contact-form input,
-.contact-form textarea {width: 100% !important }
+.control-group input, .control-group textarea, .control-group .uneditable-input{width: 100% !important }
 .email-copy-input {float: left }
 #pop-print {
     float: right;
     margin: 10px;
+}
+div#jform_catid_chzn.chzn-container, div#jform_catid_chzn.chzn-container div.chzn-drop, div#jform_state_chzn.chzn-container, div#jform_state_chzn.chzn-container div.chzn-drop, div#jform_featured_chzn.chzn-container, div#jform_featured_chzn.chzn-container div.chzn- drop, div#jform_access_chzn.chzn-container, div#jform_access_chzn.chzn-container div.chzn-drop, div#jform_metadata_tags_chzn.chzn-container, div#jform_metadata_tags_chzn.chzn-container div.chzn-drop, div#jform_language_chzn.chzn- container, div#jform_language_chzn.chzn-container div.chzn-drop, div#jform_language_chzn.chzn-container, div#jform_tags_chzn.chzn-container {
+    width: 260px !important;
+}
+.control-group .control-label {
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 html,
 body {
@@ -168,7 +173,30 @@ body {
 .group:after {clear: both }
 .ie7 .group {zoom: 1 }
 /* JOOMLA */
-.form-horizontal .control-label {text-align: inherit }
+.form-horizontal .control-label {text-align: inherit!important;}
+i.icon-calendar:before {
+	content: "\1f4c5";
+	display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  position: relative;
+  top: 1px;
+}
+div.contact-form-field label,
+div.message-label label {
+display: inline !important;
+}
+div#jform_tags_chzn.chzn-container ul.chzn-choices li.search-field input.default {
+    padding: 0;
+}
+.control-group input[type="checkbox"] {
+    width: 10px!important;
+}
+.btn-toolbar {
+    margin-bottom: 10px;
+}
 .cols-1 {
     display: block;
     float: none !important;
@@ -241,5 +269,11 @@ body {
 }
 /* Large desktop */
 @media (min-width: 1200px) { 
-    
+}
+/* Fix disappearing tabs on editor page - Added by Waseem Sadiq 8th March 2015*/
+.icons .btn-group,
+.icons .btn-group a[data-toggle="tab"][aria-expanded="false"],
+ul.nav-tabs > li > a[data-toggle="tab"][aria-expanded="false"]
+{
+    display:block!important;
 }

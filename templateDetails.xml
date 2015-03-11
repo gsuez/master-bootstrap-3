@@ -7,7 +7,7 @@
 	<copyright>Copyright © 2013 gsuez.cl</copyright>
 	<authorEmail>info@gsuez.cl</authorEmail>
 	<authorUrl>http://www.gsuez.cl</authorUrl>
-	<version>Stable 1.1</version>
+	<version>Stable 1.1.2</version>
 	<description><![CDATA[ 
 		<h1>Master Bootstrap for Joomla! 3.0</h1>
 		<p>Un template para trabajar desde 0 con todas las ventajas de Twitter Bootstrap V 3.0.</p>
@@ -48,27 +48,23 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-
 				<field name="leftColumnWidth" type="list" default="3" label="Left Column Width" description="Choose a width for your left column">
 					<option value="2">2</option>
 					<option value="3">3</option>
 					<option value="4">4</option>
 					<option value="5">5</option>
 				</field>
-					
 				<field name="rightColumnWidth" type="list" default="3" label="Right Column Width" description="Choose a width for your right column">
 					<option value="2">2</option>
 					<option value="3">3</option>
 					<option value="4">4</option>
 					<option value="5">5</option>
 				</field>
-				
 				<!-- SHOW FRONTPAGE-->	
 				<field name="frontpageshow" type="radio" class="btn-group" default="1" label="Show FrontPage Articles" description="Show FrontPage Articles">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
-
 				<!-- MODERNIZR-->
 				<field name="modernizr" type="radio" default="0" 
 					label="Modernizr" 
@@ -76,7 +72,6 @@
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-
 				<!-- FONT-AWESOME -->
 				<field name="fontawesome" type="radio" default="0" 
 					label="Font Awesome" 
@@ -84,26 +79,12 @@
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-
 				<!-- PIE-->
 				<field name="pie" type="radio" default="0" 
 					label="PIE" 
 					description="Enable PIE (CSS3 for IE 9+8)">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
-				</field>
-
-				<field name="loadJquery" type="list" default="1"
-					label="Load jQuery"
-					description="Select Load jQuery">
-						<option value="0">Not Load</option>
-						<option value="1">Load Locally</option>
-				</field>
-				<field name="loadBootstrap" type="list" default="1"
-					label="Load Bootstrap"
-					description="Select Load Bootstrap">
-						<option value="0">Not Load</option>
-						<option value="1">Load Locally</option>
 				</field>
 			</fieldset>
 			<!-- LOGO-->

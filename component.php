@@ -27,4 +27,3 @@ $doc->addStyleSheet('templates/'.$this->template.'/css/template.css');
   </div>
 </body>
 </html>
-
