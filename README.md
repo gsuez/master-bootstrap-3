@@ -19,10 +19,14 @@ This template is based in Twitter Bootstrap 3, for Joomla! 3.x.
 <li>A Fullwidth position for your sliders!</li>
 <li>Sticky Footer by default!</li>
 <li>Hide front content option, from admin!</li>
-<li>Load jquery and Bootstrap 3 from admin!</li>
 </ul>
 
 <h4>Attention: this version is stable, but under development</h4>
+<p>Special Thanks to:</p>
+<p>Bootstrap<br>
+Roberto Segura and Waseem Sadiq for tweaks<br>
+</p>
+
 
 
 
