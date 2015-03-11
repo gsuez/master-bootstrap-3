@@ -1,12 +1,11 @@
 <?php  
 /*------------------------------------------------------------------------
 # author    Gonzalo Suez
-# copyright Copyright (C) 2013 gsuez.cl. All rights reserved.
+# copyright © 2013 gsuez.cl. All rights reserved.
 # @license  http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 # Website   http://www.gsuez.cl
 -------------------------------------------------------------------------*/
 defined('_JEXEC') or die;
-
 /**
  * This is a file to add template specific chrome to module rendering.  To use it you would
  * set the style attribute for the given module(s) include in your template to use the style
@@ -20,7 +19,6 @@ defined('_JEXEC') or die;
  * NOTICE: All chrome wrapping methods should be named: modChrome_{STYLE} and take the same
  * two arguments.
  */
-
 /*
  * Module chrome for rendering the module in a submenu
  */

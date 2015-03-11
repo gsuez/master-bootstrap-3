@@ -6,10 +6,8 @@
  * @copyright   Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
-
 defined('_JEXEC') or die;
 ?>
-
 <div class = "breadcrumb<?php echo $moduleclass_sfx; ?>">
 <?php if ($params->get('showHere', 1))
 	{
@@ -24,7 +22,6 @@ defined('_JEXEC') or die;
 			unset($list[$i]);
 		}
 	}
-
 	// Find last and penultimate items in breadcrumbs list
 	end($list);
 	$last_item_key = key($list);
