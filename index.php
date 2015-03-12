@@ -119,6 +119,7 @@
 		// show on all pages
 		?>
 <div id="main-box">
+<jdoc:include type="message" />
 <jdoc:include type="component" />
 </div>
 <?php 
@@ -128,7 +129,6 @@
 			// show on all pages but the default page
 			?>
 <div id="main-box">
-<jdoc:include type="message" />
 <jdoc:include type="component" />
 </div>
 <?php
