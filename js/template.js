@@ -1,4 +1,15 @@
 // Fix hide dropdown
+if (typeof MooTools != 'undefined') {
+	var mHide = Element.prototype.hide;
+	Element.implement({
+		hide: function() {
+				if (this.hasClass("deeper")) {
+					return this;
+				}
+				mHide.apply(this, arguments);
+			}
+	});
+}
 (function($){
 	$(document).ready(function () {
 		// Dropdown menu
