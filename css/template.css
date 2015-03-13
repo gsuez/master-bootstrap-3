@@ -95,8 +95,13 @@ ol.unstyled {
 .radio-inline input[type="radio"],
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
-    float: left;
-    position: relative !important;
+  /*  float: left;
+    position: relative !important;*/
+    margin-left: 0 !important;
+}
+.checkbox label, .radio label {
+    padding-left: 20px;
+    padding-right: 10px;
 }
 label {
     display: block;
@@ -120,7 +125,10 @@ input[type="reset"],
 input[type="submit"],
 input[type="radio"],
 input[type="checkbox"] {cursor: pointer }
-.control-group input, .control-group textarea, .control-group .uneditable-input{width: 100% !important }
+.control-group input, .control-group textarea, .control-group .uneditable-input{/*width: 100% !important */}
+.contact-form .control-group input, .contact-form .control-group textarea, .contact-form .control-group .uneditable-input {
+    width: 100%;
+}
 .email-copy-input {float: left }
 #pop-print {
     float: right;
@@ -132,6 +140,19 @@ div#jform_catid_chzn.chzn-container, div#jform_catid_chzn.chzn-container div.chz
 .control-group .control-label {
     padding-top: 7px;
     padding-bottom: 7px;
+}
+.chzn-container-single .chzn-single {
+    width: 140px;
+}
+.chzn-container .chzn-drop{
+    width: 100px;
+}
+.btn.modal {
+    bottom: auto;
+    display: inline;
+    left: auto;
+    position: relative;
+    top: auto;
 }
 html,
 body {
