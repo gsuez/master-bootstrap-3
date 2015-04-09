@@ -27,7 +27,8 @@ This template is based in Twitter Bootstrap 3, for Joomla! 3.x.
 Roberto Segura and Waseem Sadiq for tweaks<br>
 </p>
 
-
+<h4>Support</h4>
+<a href="http://groups.google.com/group/master-bootstrap/subscribe" target="_blank">Google Group</a>
 
 
 
