@@ -32,9 +32,11 @@
 <div class="navbar-header">
 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 <span class="sr-only">Toggle navigation</span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
+<?php if($this->params->get('fontawesome')== '1'){
+	echo '<i class="fa fa-bars"></i>';
+} else {
+	echo '<span class="glyphicon glyphicon-align-justify"></span>';
+} ?>
 </button>
                 <div id="brand">
                                 <a href="<?php  echo $this->params->get('logo_link')   ?>">
