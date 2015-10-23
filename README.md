@@ -30,6 +30,17 @@ Roberto Segura and Waseem Sadiq for tweaks<br>
 <h4>Support</h4>
 <a href="http://groups.google.com/group/master-bootstrap/subscribe" target="_blank">Google Group</a>
 
+<h2>New Features Master Bootstrap v. 1.2.0</h2>
+<ul>
+<li>New: headroom jquery, for UX navigation</li>
+<li>New: mmenu jquery, for side menu, with animation</li>
+<li>New: Custom 404 error page</li>
+<li>New: Position add "Copy" for copyright</li>
+<li>New: MB style for modules</li>
+<li>Upgrade: Bootstrap 3.3.5</li>
+<li>Upgrade: Font Awesome 4.4.0</li>
+<li>Fixed: blog columns; override with Bootstrap style</li>
+</ul>
 
 
 
