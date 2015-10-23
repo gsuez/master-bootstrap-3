@@ -1,0 +1,9 @@
+New: headroom jquery, for UX navigation
+New: mmenu jquery, for side menu, with animation
+New: Custom 404 error page
+New: Position add "Copy" for copyright
+New: MB style for modules
+Upgrade: Bootstrap 3.3.5
+Upgrade: Font Awesome 4.4.0
+Fixed: blog columns; override with Bootstrap style
+

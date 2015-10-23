@@ -13,6 +13,9 @@
 <?php
  include 'includes/head.php'; ?>
 <body>
+<div id="wrap">
+<!--Navigation-->
+<header id="header" class="header header--fixed hide-from-print" role="banner">
 <!--top-->
 <?php  if($this->countModules('top')) : ?>
 <div id="top" class="navbar-inverse">
@@ -24,8 +27,6 @@
 </div>
 <?php  endif; ?>
 <!--top-->
-<div id="wrap">
-<!--Navigation-->
 <div id="navigation">
 <div class="navbar navbar-default" role="navigation">
 <div class="container">
@@ -51,8 +52,9 @@
 </div>
 </div>
 </div>
-</div>
+</header>
 <!--Navigation-->
+<section>
 <!--fullwidth-->
 <?php  if($this->countModules('fullwidth')) : ?>
 <div id="fullwidth">
@@ -162,12 +164,10 @@
 </div>
 </div>
 <?php  endif; ?>
-<div id="push"></div>
 <!-- bottom -->
-</div>
 <!-- footer -->
 <?php  if($this->countModules('footer')) : ?>
-<div id="footer" class="well">
+<div id="footer">
 <div class="container">
 <div class="row">
 <jdoc:include type="modules" name="footer" style="block" />
@@ -176,8 +176,30 @@
 </div>
 <?php  endif; ?>
 <!-- footer -->
+<!--<div id="push"></div>-->
+</div>
+<!-- copy -->
+<?php  if($this->countModules('copy')) : ?>
+<div id="copy"  class="well">
+<div class="container">
+<div class="row">
+<jdoc:include type="modules" name="copy" style="block" />
+</div>
+</div>
+</div>
+</div>
+<?php  endif; ?>
+<!-- copy -->
+<!-- menu slide -->
+<?php  if($this->countModules('panelnav')): ?>
+<div id="panelnav">
+    <jdoc:include type="modules" name="panelnav" style="none" />
+</div><!-- end panelnav -->
+<?php  endif;// end panelnav  ?>
+<!-- menu slide -->
 <a href="#" class="back-to-top">Back to Top</a>
-<jdoc:include type="modules" name="debug" />        
+<jdoc:include type="modules" name="debug" />
+</section>
 <!-- page -->        
 <!-- JS -->
 <script type="text/javascript" src="<?php echo $tpath; ?>/js/template.js"></script>

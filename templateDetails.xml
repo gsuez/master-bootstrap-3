@@ -2,16 +2,16 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade">
 	<name>Master Bootstrap</name>
-	<creationDate>21 DIC 2014</creationDate>
+	<creationDate>23 OCT 2015</creationDate>
 	<author>Gonzalo Suez</author>
-	<copyright>Copyright © 2013 gsuez.cl</copyright>
+	<copyright>Copyright © 2013 - 2015 gsuez.cl</copyright>
 	<authorEmail>info@gsuez.cl</authorEmail>
 	<authorUrl>http://www.gsuez.cl</authorUrl>
-	<version>Stable 1.1.2</version>
+	<version>Stable 1.2.0</version>
 	<description><![CDATA[ 
 		<h1>Master Bootstrap for Joomla! 3.0</h1>
-		<p>Un template para trabajar desde 0 con todas las ventajas de Twitter Bootstrap V 3.0.</p>
-		<p>A template to work from scratch, with all the advantages of Twitter Bootstrap.</p>
+		<p>Un template para trabajar desde 0 con todas las ventajas de Bootstrap v.3.3.5</p>
+		<p>A template to work from scratch, with all the advantages of Bootstrap.</p>
 		<p>Created by <a href="http://www.gsuez.cl" target="_blank">Gonzalo Suez </a></p>
 	]]></description>
 	<files>
@@ -30,17 +30,18 @@
 	</files>
     <positions>
 		<position>top</position>
-        <position>breadcrumbs</position>
 		<position>navigation</position>
 		<position>fullwidth</position>
         <position>showcase</position>
 		<position>feature</position>
+        <position>breadcrumbs</position>
         <position>left</position>
         <position>right</position>
         <position>content-top</position>
         <position>content-bottom</position>
         <position>bottom</position>    
         <position>footer</position>
+        <position>copy</position>
 		<position>debug</position>
 	</positions>
 	<config>
