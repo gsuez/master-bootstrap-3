@@ -426,7 +426,10 @@ background:#363636;
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) { 
 }
 /* Landscape phones and down */
-@media (max-width: 480px) { 
+@media (max-width: 480px) {
+	#brand, #brand img {
+    width: 80% !important;
+}
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
