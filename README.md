@@ -42,6 +42,11 @@ Roberto Segura and Waseem Sadiq for tweaks<br>
 <li>Fixed: blog columns; override with Bootstrap style</li>
 </ul>
 
+<h2>New Feature Master Bootstrap v. 1.2.1</h2>
+<ul>
+<li>New: Add Font Awesome icon in module title</li>
+</ul>
+
 
 
 
