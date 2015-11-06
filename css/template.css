@@ -304,6 +304,9 @@ border-bottom:none!important;
 }
 .title > span {
     background: none repeat scroll 0 0 transparent;
+/*    padding-right: 10px;*/
+}
+span.fa {
     padding-right: 10px;
 }
 .title6 .title {
@@ -311,58 +314,13 @@ border-bottom:2px solid #1d6fa5;
 padding-bottom:15px;
 margin-bottom:20px;
 }
-.box1 {
+.box1 .moduletable {
 background:#eee;
 }
-.box2 {
+.box2 .moduletable {
 background:#363636;
     color: #adadad;
 }
-/*
-.cols-1 {
-    display: block;
-    float: none !important;
-    margin: 0 !important;
-}
-.cols-2 .column-1 {
-    float: left;
-    width: 46%;
-}
-.cols-2 .column-2 {
-    float: right;
-    margin: 0;
-    width: 46%;
-}
-.cols-3 .column-1 {
-    float: left;
-    margin-right: 4%;
-    padding: 0 5px;
-    width: 29%;
-}
-.cols-3 .column-2 {
-    float: left;
-    margin-left: 0;
-    padding: 0 5px;
-    width: 29%;
-}
-.cols-3 .column-3 {
-    float: right;
-    padding: 0 5px;
-    width: 29%;
-}
-.items-row {
-    margin-bottom: 10px !important;
-    overflow: hidden;
-}
-.column-1,
-.column-2,
-.column-3 {padding: 10px 5px }
-.column-2 {
-    margin-left: 40%;
-    width: 55%;
-}
-.column-3 {width: 30% }
-*/
 .blog-more {padding: 10px 5px }
 /*TO TOP*/
 .back-to-top {
