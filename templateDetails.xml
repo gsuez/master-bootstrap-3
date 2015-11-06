@@ -2,12 +2,12 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade">
 	<name>Master Bootstrap</name>
-	<creationDate>23 OCT 2015</creationDate>
+	<creationDate>05 NOV 2015</creationDate>
 	<author>Gonzalo Suez</author>
 	<copyright>Copyright © 2013 - 2015 gsuez.cl</copyright>
 	<authorEmail>info@gsuez.cl</authorEmail>
 	<authorUrl>http://www.gsuez.cl</authorUrl>
-	<version>Stable 1.2.0</version>
+	<version>Stable 1.2.1</version>
 	<description><![CDATA[ 
 		<h1>Master Bootstrap for Joomla! 3.0</h1>
 		<p>Un template para trabajar desde 0 con todas las ventajas de Bootstrap v.3.3.5</p>
