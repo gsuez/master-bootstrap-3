@@ -379,6 +379,16 @@ background:#363636;
     top: 0;
     z-index: 10;
 }
+/*OFFLINE*/
+#frame input.inputbox {
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+}
+#frame {
+    margin-top: 100px;
+}
 /* Media Queries */
 /* Retina */
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) { 
