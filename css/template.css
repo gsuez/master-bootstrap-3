@@ -46,14 +46,14 @@ img {max-width: 100% }
     left: 0 !important;
     right: auto !important;
 }
-.main-box {
+#main-box {
     background: none repeat scroll 0 0 #FFFFFF;
     border: 0px solid #E5E5E5; /* border 1, if you have front component*/
     margin-bottom: 20px;
-    padding: 10px;
+/*    padding: 10px;*/
 }
 #main {
-    padding-bottom: 40px;
+/*    padding-bottom: 40px;*/
 }
 #breadcrumbs .moduletable {
     border: 0;
