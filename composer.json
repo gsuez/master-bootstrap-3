@@ -1,0 +1,10 @@
+{
+    "require": {
+        "leafo/scssphp": "^0.6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phproberto\\Sass\\": "vendor/phproberto/sass/src"
+        }
+    }
+}

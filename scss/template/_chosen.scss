@@ -1,0 +1,25 @@
+//
+// Chosen fields
+// --------------------------------------------------
+
+div#jform_catid_chzn.chzn-container,
+div#jform_catid_chzn.chzn-container div.chzn-drop,
+div#jform_state_chzn.chzn-container,
+div#jform_state_chzn.chzn-container div.chzn-drop,
+div#jform_featured_chzn.chzn-container,
+div#jform_featured_chzn.chzn-container div.chzn- drop,
+div#jform_access_chzn.chzn-container,
+div#jform_access_chzn.chzn-container div.chzn-drop,
+div#jform_metadata_tags_chzn.chzn-container,
+div#jform_metadata_tags_chzn.chzn-container div.chzn-drop,
+div#jform_language_chzn.chzn-container div.chzn-drop,
+div#jform_language_chzn.chzn-container,
+div#jform_tags_chzn.chzn-container {
+    width: 260px !important;
+}
+.chzn-container-single .chzn-single {
+    width: 140px;
+}
+.chzn-container .chzn-drop{
+    width: 100px;
+}

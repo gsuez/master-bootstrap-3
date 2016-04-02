@@ -1,0 +1,51 @@
+//
+// Forms
+// --------------------------------------------------
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  /*  float: left;
+    position: relative !important;*/
+    margin-left: 0 !important;
+}
+.checkbox label, .radio label {
+    padding-left: 20px;
+    padding-right: 10px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+label,
+input,
+button,
+select,
+textarea {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+    font-family: arial;
+}
+label,
+select,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+	cursor: pointer
+}
+.control-group input, .control-group textarea, .control-group .uneditable-input{/*width: 100% !important */}
+.contact-form .control-group input, .contact-form .control-group textarea, .contact-form .control-group .uneditable-input {
+    width: 100%;
+}
+.email-copy-input {
+	float: left
+}
+.control-group .control-label {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
