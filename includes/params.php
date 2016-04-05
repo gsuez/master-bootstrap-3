@@ -19,6 +19,7 @@
 	// Include all compiled plugins (below), or include individual files as needed
 	$doc->addScript('templates/' . $this->template . '/js/holder.js');
 	$doc->addScript('templates/' . $this->template . '/js/headroom.min.js');
+	$doc->addScript('templates/' . $this->template . '/js/material.min.js');
 	//$doc->addScript('templates/' . $this->template . '/js/jquery.mmenu.min.all.js');
 	//$doc->addScript('templates/' . $this->template . '/js/dropdown.js');
 	//$doc->addScript('templates/' . $this->template . '/js/bootswatch.js');
@@ -28,7 +29,7 @@
 	// Add Stylesheets
 	$doc->addStyleSheet('templates/' . $this->template . '/css/icons.css');
 	$doc->addStyleSheet('templates/' . $this->template . '/css/template.css');
-	//$doc->addStyleSheet('templates/' . $this->template . '/css/navbar.css');
+	$doc->addStyleSheet('templates/' . $this->template . '/css/material.min.css');
 	// Disable mootools
 	//unset($doc->_scripts[JURI::root(true) . '/media/system/js/mootools-more.js']);
 	//unset($doc->_scripts[JURI::root(true) . '/media/system/js/mootools-core.js']);
@@ -52,6 +53,10 @@
 	$modernizr = $this->params->get('modernizr');
 	$fontawesome = $this->params->get('fontawesome');
 	$pie = $this->params->get('pie');
+	//Layout Options
+	$layout = $this->params->get('layout');
+	//Pattern options
+	$pattern = $this->params->get('pattern');
 	// Generator tag
 	$this->setGenerator(null);
 	// Force latest IE & chrome frame

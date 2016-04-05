@@ -1,3 +1,4 @@
+Master Bootstrap 1.2.1
 New: headroom jquery, for UX navigation
 New: mmenu jquery, for side menu, with animation
 New: Custom 404 error page
@@ -6,4 +7,12 @@ New: MB style for modules
 Upgrade: Bootstrap 3.3.5
 Upgrade: Font Awesome 4.4.0
 Fixed: blog columns; override with Bootstrap style
+
+Master Bootstrap 1.2.2
+New: SASS compiler option
+New: Boxed or Wide layout design?
+New: in Boxed layout, pattern options
+New: Material Design, ready for use!!!
+And much more...
+
 

@@ -40,14 +40,12 @@
 			<?php  endif; ?>
 		</div>
 	</div>
-	<?php  if (JPluginHelper::isEnabled('system', 'remember')) : ?>
-	<div id="form-login-remember" class="checkbox">
-		<label for="modlgn-remember"><?php  echo JText::_('MOD_LOGIN_REMEMBER_ME')  ?>
-			<input id="modlgn-remember" type="checkbox" name="remember" class="inputbox" value="yes"/>
-		</label>
-	</div>
-	<?php  endif; ?>
-	<button type="submit" tabindex="0" name="Submit" class="btn btn-primary btn-block margin-bottom-sm"><?php  echo JText::_('JLOGIN')  ?></button>
+		<?php if (JPluginHelper::isEnabled('system', 'remember')) : ?>
+		<div id="form-login-remember" class="checkbox control-group">
+			<label for="modlgn-remember"><input id="modlgn-remember" type="checkbox" name="remember" class="inputbox" value="yes"/> <?php echo JText::_('MOD_LOGIN_REMEMBER_ME') ?></label>
+		</div>
+		<?php endif; ?>
+	<button type="submit" tabindex="0" name="Submit" class="btn btn-primary"><?php  echo JText::_('JLOGIN')  ?></button>
 	<?php
  $usersConfig = JComponentHelper::getParams('com_users');if ($usersConfig->get('allowUserRegistration')) : ?>
 	<ul class="unstyled">

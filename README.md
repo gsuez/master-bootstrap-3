@@ -47,6 +47,15 @@ Roberto Segura and Waseem Sadiq for tweaks<br>
 <li>New: Add Font Awesome icon in module title</li>
 </ul>
 
-
+<h2>New Feature Master Bootstrap v. 1.2.2</h2>
+<ul>
+<li>New: SASS compiler option</li>
+<li>New: Boxed or Wide layout design?</li>
+<li>New: in Boxed layout, pattern options</li>
+<li>New: Material Design, ready for use!!!</li>
+<li>And much more...</li>
+</ul>
+<p>Special Thanks to:</p>
+<p>Roberto Segura for add SASS :)</p>
 
 

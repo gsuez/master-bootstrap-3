@@ -20,6 +20,16 @@ if ($params->get('compile_sass', '0') === '1')
 <?php
  include 'includes/head.php'; ?>
 <body>
+<?php
+ if($layout=='boxed'){ ?>
+<?php  $path= JURI::base().'templates/'.$this->template."/images/elements/pattern".$pattern.".png"; ?>
+<style type="text/css">
+ body {
+    background: url("<?php  echo $path ; ?>") repeat fixed center top rgba(0, 0, 0, 0);
+ }
+</style>
+<div class="layout-boxed">
+  <?php  } ?>
 <div id="wrap">
 <!--Navigation-->
 <header id="header" class="header header--fixed hide-from-print" role="banner">
@@ -60,6 +70,7 @@ if ($params->get('compile_sass', '0') === '1')
 </div>
 </div>
 </header>
+<div class="clearfix"></div>
 <!--Navigation-->
 <section>
 <!--fullwidth-->
@@ -95,12 +106,16 @@ if ($params->get('compile_sass', '0') === '1')
 <!--Feature-->
 <!-- Content -->
 <div class="container">
+<!--Breadcrum-->
 <?php  if($this->countModules('breadcrumbs')) : ?>
 <div id="breadcrumbs">
+<div class="container">
 <div class="row">
 <jdoc:include type="modules" name="breadcrumbs" style="block" />
 </div>
 </div>
+</div>
+<!--Breadcrum-->
 <?php  endif; ?>
 <div id="main" class="row show-grid">
 <!-- Left -->
@@ -184,7 +199,6 @@ if ($params->get('compile_sass', '0') === '1')
 <?php  endif; ?>
 <!-- footer -->
 <!--<div id="push"></div>-->
-</div>
 <!-- copy -->
 <?php  if($this->countModules('copy')) : ?>
 <div id="copy"  class="well">
@@ -196,6 +210,7 @@ if ($params->get('compile_sass', '0') === '1')
 </div>
 </div>
 <?php  endif; ?>
+</div>
 <!-- copy -->
 <!-- menu slide -->
 <?php  if($this->countModules('panelnav')): ?>
