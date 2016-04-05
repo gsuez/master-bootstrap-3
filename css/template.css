@@ -319,6 +319,9 @@ img {max-width: 100% }
 /*    border: 0;
     padding: 0;*/
 }
+.toppad {
+    padding-top: 40px;
+}
 #fullwidth {
     /*margin-top: -20px;*/
     overflow: hidden;
