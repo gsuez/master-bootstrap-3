@@ -38,7 +38,7 @@ if ($params->get('compile_sass', '0') === '1')
 <div id="top" class="navbar-inverse">
 <div class="container">
 <div class="row">
-<jdoc:include type="modules" name="top" style="none" />
+<jdoc:include type="modules" name="top" style="none" />        
 </div>
 </div>
 </div>
@@ -98,14 +98,12 @@ if ($params->get('compile_sass', '0') === '1')
 <div id="feature">
 <div class="container">
 <div class="row">
-<jdoc:include type="modules" name="feature" style="block" />
+<jdoc:include type="modules" name="feature" style="block" />        
 </div>
 </div>
 </div>
 <?php  endif; ?>
 <!--Feature-->
-<!-- Content -->
-<div class="container">
 <!--Breadcrum-->
 <?php  if($this->countModules('breadcrumbs')) : ?>
 <div id="breadcrumbs">
@@ -117,6 +115,8 @@ if ($params->get('compile_sass', '0') === '1')
 </div>
 <!--Breadcrum-->
 <?php  endif; ?>
+<!-- Content -->
+<div class="container">
 <div id="main" class="row show-grid">
 <!-- Left -->
 <?php  if($this->countModules('left')) : ?>
@@ -126,19 +126,19 @@ if ($params->get('compile_sass', '0') === '1')
 <?php  endif; ?>
 <!-- Component -->
 <div id="container" class="col-sm-<?php  echo (12-$leftcolgrid-$rightcolgrid); ?>">
-<!-- Content-top Module Position -->
+<!-- Content-top Module Position -->        
 <?php  if($this->countModules('content-top')) : ?>
 <div id="content-top">
 <div class="row">
-<jdoc:include type="modules" name="content-top" style="block" />
+<jdoc:include type="modules" name="content-top" style="block" />        
 </div>
 </div>
 <?php  endif; ?>
-<!-- Front page show or hide -->
+<!-- Front page show or hide -->    
 <?php
 	$app = JFactory::getApplication();
 	$menu = $app->getMenu();
-
+	
 	if ($frontpageshow){
 		// show on all pages
 		?>
@@ -146,9 +146,9 @@ if ($params->get('compile_sass', '0') === '1')
 <jdoc:include type="message" />
 <jdoc:include type="component" />
 </div>
-<?php
+<?php 
 	} else {
-
+		
 		if ($menu->getActive() !== $menu->getDefault()) {
 			// show on all pages but the default page
 			?>
@@ -156,13 +156,13 @@ if ($params->get('compile_sass', '0') === '1')
 <jdoc:include type="component" />
 </div>
 <?php
- }} ?>
-<!-- Front page show or hide -->
-<!-- Below Content Module Position -->
+ }} ?>	
+<!-- Front page show or hide -->    		
+<!-- Below Content Module Position -->        
 <?php  if($this->countModules('content-bottom')) : ?>
 <div id="content-bottom">
 <div class="row">
-<jdoc:include type="modules" name="content-bottom" style="block" />
+<jdoc:include type="modules" name="content-bottom" style="block" />	
 </div>
 </div>
 <?php  endif; ?>
@@ -222,7 +222,7 @@ if ($params->get('compile_sass', '0') === '1')
 <a href="#" class="back-to-top">Back to Top</a>
 <jdoc:include type="modules" name="debug" />
 </section>
-<!-- page -->
+<!-- page -->        
 <!-- JS -->
 <script type="text/javascript" src="<?php echo $tpath; ?>/js/template.js"></script>
 <!-- JS -->
