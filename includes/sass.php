@@ -23,7 +23,7 @@ $scssFolder  = dirname(__DIR__) . '/scss';
 $cssFolder   = dirname(__DIR__) . '/css';
 $cacheFolder = JPATH_ROOT . '/cache';
 
-$scss = new FileCompiler($scssFolder, $cssFolder, $cacheFolder);
+$scss = new FileCompiler($cacheFolder);
 
 try
 {

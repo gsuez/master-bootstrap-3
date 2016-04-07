@@ -28,7 +28,7 @@
 	//$doc->addScript('templates/' . $this->template . '/js/modal.js');
 	// Add Stylesheets
 	$doc->addStyleSheet('templates/' . $this->template . '/css/icons.css');
-	$doc->addStyleSheet('templates/' . $this->template . '/css/template.css');
+	$doc->addStyleSheet('templates/' . $this->template . '/css/template.min.css');
 	$doc->addStyleSheet('templates/' . $this->template . '/css/material.min.css');
 	// Disable mootools
 	//unset($doc->_scripts[JURI::root(true) . '/media/system/js/mootools-more.js']);

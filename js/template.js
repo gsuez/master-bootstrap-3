@@ -25,7 +25,7 @@ var myElement = document.querySelector("header");
 // construct an instance of Headroom, passing the element
 var headroom  = new Headroom(myElement);
 // initialise
-headroom.init(); 
+headroom.init();
 		// Fix hide dropdown
 		$('.dropdown-menu input, .dropdown-menu label').click(function(e) {
 			e.stopPropagation();
