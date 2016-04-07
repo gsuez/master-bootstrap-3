@@ -1,0 +1,44 @@
+{
+  "name": "master-bootstrap",
+  "version": "1.2.2",
+  "description": "Bootstrap 3 template for Joomla!",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gsuez/master-bootstrap-3.git"
+  },
+  "keywords": [
+    "joomla",
+    "template",
+    "twitter",
+    "bootstrap3",
+    "bootstrap"
+  ],
+  "author": "Gonzalo Suez <info@gsuez.cl>",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/gsuez/master-bootstrap-3/issues"
+  },
+  "homepage": "https://github.com/gsuez/master-bootstrap-3#readme",
+  "devDependencies": {
+    "beepbeep": "^1.2.0",
+    "browser-sync": "^2.11.2",
+    "del": "^2.2.0",
+    "fs": "0.0.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.4",
+    "gulp-concat": "^2.6.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
+    "gulp-zip": "^3.2.0",
+    "joomla-gulp": "^1.1.1",
+    "require-dir": "^0.3.0",
+    "xml2js": "^0.4.16"
+  }
+}

@@ -24,7 +24,7 @@ $cssFolder   = dirname(__DIR__) . '/css';
 $cacheFolder = JPATH_ROOT . '/cache';
 
 $compiler = new FileCompiler($scssFolder, $cssFolder, $cacheFolder);
-$compiler->addFile('_template.scss');
+$compiler->addFile('template.scss');
 
 try
 {
