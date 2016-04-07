@@ -404,8 +404,7 @@ span.fa {
 /* Large desktop */
 @media (min-width: 1200px) {
   section {
-    margin-top: auto;
-    padding-top: 160px; } }
+    margin-top: auto; } }
 
 /* Fix disappearing tabs on editor page - Added by Waseem Sadiq 8th March 2015*/
 .icons .btn-group,
