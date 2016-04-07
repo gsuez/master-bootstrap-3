@@ -103,7 +103,7 @@
 			</fieldset>
 			<!-- LAYOUT -->
 		<fieldset name="Layout" label="Layout Options">
-        <field name="layout" type="list" default="full" label="Layout" description="Select Full Layout or Boxed Layout" >
+        <field name="layout" type="radio" class="btn-group" default="full" label="Layout" description="Select Full Layout or Boxed Layout" >
           <option value="full">Full Layout</option>
           <option value="boxed">Boxed Layout</option>
         </field>
