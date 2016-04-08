@@ -19,11 +19,46 @@ use Leafo\ScssPhp\Compiler;
 class FileCompiler
 {
 	/**
-	 * Cached file compilations.
+	 * @const  string
+	 */
+	const FORMATTER_COMPACT = 'Leafo\ScssPhp\Formatter\Compact';
+
+	/**
+	 * @const  string
+	 */
+	const FORMATTER_COMPRESSED = 'Leafo\ScssPhp\Formatter\Compressed';
+
+	/**
+	 * @const  string
+	 */
+	const FORMATTER_CRUNCHED = 'Leafo\ScssPhp\Formatter\Crunched';
+
+	/**
+	 * @const  string
+	 */
+	const FORMATTER_DEBUG = 'Leafo\ScssPhp\Formatter\Debug';
+
+	/**
+	 * @const  string
+	 */
+	const FORMATTER_EXPANDED = 'Leafo\ScssPhp\Formatter\Expanded';
+
+	/**
+	 * @const  string
+	 */
+	const FORMATTER_NESTED = 'Leafo\ScssPhp\Formatter\Nested';
+
+	/**
+	 * @const  string
+	 */
+	const FORMATTER_OUTPUT_BLOCK = 'Leafo\ScssPhp\Formatter\OutputBlock';
+
+	/**
+	 * Cached compiled files.
 	 *
 	 * @var  array
 	 */
-	protected $cachedCompilations = array();
+	protected $cachedFiles = array();
 
 	/**
 	 * Folder where cache files will be stored.
@@ -33,32 +68,18 @@ class FileCompiler
 	protected $cacheFolder;
 
 	/**
+	 * Compiled files.
+	 *
+	 * @var  array
+	 */
+	protected $compiledFiles = array();
+
+	/**
 	 * Sass compiler.
 	 *
 	 * @var  \Leafo\ScssPhp\Compiler
 	 */
 	protected $compiler;
-
-	/**
-	 * Folder for css files.
-	 *
-	 * @var  string
-	 */
-	protected $cssFolder;
-
-	/**
-	 * Files to compile.
-	 *
-	 * @var  array
-	 */
-	protected $files = array();
-
-	/**
-	 * Folder for scss files.
-	 *
-	 * @var  string
-	 */
-	protected $scssFolder;
 
 	/**
 	 * Time elapsed compiling.
@@ -70,26 +91,10 @@ class FileCompiler
 	/**
 	 * Constructor
 	 *
-	 * @param   string  $scssFolder   Folder containing source scss files.
-	 * @param   string  $cssFolder    Folder where compiled files will be saved.
 	 * @param   string  $cacheFolder  Folder where cache files will be stored.
 	 */
-	public function __construct($scssFolder, $cssFolder, $cacheFolder)
+	public function __construct($cacheFolder)
 	{
-		if (!is_dir($cssFolder))
-		{
-			throw new \InvalidArgumentException("Folder cannot be accessed: " . $cssFolder);
-		}
-
-		$this->cssFolder = $cssFolder;
-
-		if (!is_dir($scssFolder))
-		{
-			throw new \InvalidArgumentException("Folder cannot be accessed: " . $scssFolder);
-		}
-
-		$this->scssFolder = $scssFolder;
-
 		if (!is_dir($cacheFolder))
 		{
 			throw new \InvalidArgumentException("Folder cannot be accessed: " . $cacheFolder);
@@ -99,107 +104,27 @@ class FileCompiler
 	}
 
 	/**
-	 * Add file to compile.
-	 *
-	 * @param   string  $sourceFile  Source Sass file
-	 * @param   string  $outputFile  File where compiled Sass will be stored.
-	 *
-	 * @return  self
-	 *
-	 * @throws  \InvalidArgumentException
-	 */
-	public function addFile($sourceFile, $outputFile = null)
-	{
-		$sourceFile = $this->scssFolder . '/' . $sourceFile;
-
-		if (!file_exists($sourceFile))
-		{
-			throw new \InvalidArgumentException("File does not exist: " . $sourceFile);
-		}
-
-		if (null === $outputFile)
-		{
-			$sourceFileInfo = pathinfo($sourceFile);
-			$outputFile = ltrim($sourceFileInfo['filename'], '_') . '.css';
-		}
-
-		$outputFile = $this->cssFolder . '/' . $outputFile;
-
-		$this->files[$sourceFile] = $outputFile;
-
-		return $this;
-	}
-
-	/**
-	 * Add files to compile.
-	 *
-	 * @param   array  $files  Files to compile
-	 *
-	 * @return  self
-	 *
-	 * @throws  \InvalidArgumentException
-	 */
-	public function addFiles(array $files)
-	{
-		foreach ($files as $key => $file)
-		{
-			if (is_numeric($key))
-			{
-				$this->addFile($file);
-
-				continue;
-			}
-
-			$this->addFile($key, $file);
-		}
-
-		return $this;
-	}
-
-	/**
-	 * Compile all the files.
-	 *
-	 * @return  boolean
-	 *
-	 * @throws  \InvalidArgumentException  Source files cannot be accessed
-	 * @throws  \RuntimeException          If there are issues compiling files
-	 */
-	public function compile()
-	{
-		$this->cachedCompilations = array();
-
-		foreach ($this->files as $sourceFile => $destFile)
-		{
-			if (!$this->compileFile($sourceFile, $destFile))
-			{
-				return false;
-			}
-		}
-
-		return true;
-	}
-
-	/**
 	 * Compile a Sass file.
 	 *
 	 * @param   string  $sourceFile  Source file.
 	 * @param   string  $destFile    Destination file
+	 * @param   string  $formatter   Formatter to use to compile the file
 	 *
 	 * @return  boolean
 	 *
 	 * @throws  \InvalidArgumentException  Source file cannot be accessed
 	 * @throws  \RuntimeException          If there are issues compiling file
 	 */
-	public function compileFile($sourceFile, $destFile)
+	public function compileFile($sourceFile, $destFile, $formatter = null)
 	{
-		$this->timeElapsed[$sourceFile] = 0;
+		$this->timeElapsed[$destFile] = 0;
+		unset($this->cachedFiles[$destFile]);
 		$startTime = microtime(true);
-		unset($this->cachedCompilations[$sourceFile]);
 
-		if (!$this->fileRequiresUpdate($sourceFile))
+		if (!$this->fileRequiresUpdate($destFile))
 		{
-			$this->cachedCompilations[$sourceFile] = 1;
-			$this->timeElapsed[$sourceFile] = round((microtime(true) - $startTime), 4);
+			$this->cachedFiles[$destFile] = 1;
+			$this->timeElapsed[$destFile] = round((microtime(true) - $startTime), 4);
 
 			return true;
 		}
@@ -211,11 +136,18 @@ class FileCompiler
 
 		$sourceFileInfo = pathinfo($sourceFile);
 
-		$this->getCompiler()->addImportPath($sourceFileInfo['dirname'] . '/');
+		$compiler = $this->getCompiler();
+
+		$compiler->addImportPath($sourceFileInfo['dirname'] . '/');
 
 		try
 		{
-			$compiled = $this->getCompiler()->compile(file_get_contents($sourceFile), $sourceFile);
+			if ($formatter)
+			{
+				$compiler->setFormatter($formatter);
+			}
+
+			$compiled = $compiler->compile(file_get_contents($sourceFile), $sourceFile);
 		}
 		catch (Exception $e)
 		{
@@ -228,14 +160,15 @@ class FileCompiler
 		}
 
 		$cacheFile = $this->getCacheFileName($destFile);
-		$parsedFiles = $this->getCompiler()->getParsedFiles();
+		$parsedFiles = $compiler->getParsedFiles();
 
 		if (!file_put_contents($cacheFile, json_encode($parsedFiles)))
 		{
 			throw new \RuntimeException("Error saving cache file: " . $cacheFile);
 		}
 
-		$this->timeElapsed[$sourceFile] = round((microtime(true) - $startTime), 4);
+		$this->compiledFiles[$destFile] = $sourceFile;
+		$this->timeElapsed[$destFile] = round((microtime(true) - $startTime), 4);
 
 		return true;
 	}
@@ -243,19 +176,12 @@ class FileCompiler
 	/**
 	 * Check if a file needs to be re-compiled.
 	 *
-	 * @param   string  $file  File to check for updates
+	 * @param   string  $destFile  File to check for updates
 	 *
 	 * @return  boolean
 	 */
-	private function fileRequiresUpdate($file)
+	private function fileRequiresUpdate($destFile)
 	{
-		if (!isset($this->files[$file]))
-		{
-			throw new \InvalidArgumentException("File is not set to compile: " . $file);
-		}
-
-		$destFile = $this->files[$file];
-
 		$cacheFile = $this->getCacheFileName($destFile);
 
 		if (!file_exists($cacheFile))
@@ -281,7 +207,7 @@ class FileCompiler
 	}
 
 	/**
-	 * Get the cache file name associated to its source file.
+	 * Get the cache file name associated to its destination file.
 	 *
 	 * @param   string  $file  File that has associated the cache file.
 	 *
@@ -293,17 +219,16 @@ class FileCompiler
 	}
 
 	/**
-	 * Get the Sass compiler instance
+	 * Get the Sass compiler instance.
 	 *
 	 * @return  \Leafo\ScssPhp\Compiler
 	 */
-	private function getCompiler()
+	public function getCompiler()
 	{
 		if (null === $this->compiler)
 		{
 			$this->compiler = new Compiler;
 			$this->compiler->setFormatter('Leafo\ScssPhp\Formatter\Compressed');
-			$this->compiler->setImportPaths($this->scssFolder);
 		}
 
 		return $this->compiler;
@@ -335,12 +260,12 @@ class FileCompiler
 	 */
 	public function isCachedCompilation($file = null)
 	{
-		if ($file && !isset($this->cachedCompilations[$file]))
+		if ($file)
 		{
-			return false;
+			return isset($this->cachedFiles[$file]);
 		}
 
-		return count($this->files) === count($this->cachedCompilations);
+		return count($this->compiledFiles) === 0;
 	}
 
 	/**

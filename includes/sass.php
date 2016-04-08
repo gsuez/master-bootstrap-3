@@ -23,12 +23,12 @@ $scssFolder  = dirname(__DIR__) . '/scss';
 $cssFolder   = dirname(__DIR__) . '/css';
 $cacheFolder = JPATH_ROOT . '/cache';
 
-$compiler = new FileCompiler($scssFolder, $cssFolder, $cacheFolder);
-$compiler->addFile('template.scss');
+$scss = new FileCompiler($cacheFolder);
 
 try
 {
-	$compiler->compile();
+	$scss->compileFile($scssFolder . '/template.scss', $cssFolder . '/template.css', FileCompiler::FORMATTER_EXPANDED);
+	$scss->compileFile($scssFolder . '/template.scss', $cssFolder . '/template.min.css', FileCompiler::FORMATTER_COMPRESSED);
 }
 catch (Exception $e)
 {
@@ -37,11 +37,11 @@ catch (Exception $e)
 
 $message = 'Sass successfully compiled.';
 
-if ($compiler->isCachedCompilation())
+if ($scss->isCachedCompilation())
 {
 	$message = 'No Sass files were modified.';
 }
 
-$message .= ' Time elapsed ' . $compiler->getTimeElapsed() . ' seconds';
+$message .= ' Time elapsed ' . $scss->getTimeElapsed() . ' seconds';
 
 JFactory::getApplication()->enqueueMessage($message, 'Success');
