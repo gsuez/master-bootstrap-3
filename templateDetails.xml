@@ -87,6 +87,14 @@
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
+				<!-- MATERIAL DESIGN-->
+				<field name="materialdesign" type="radio" class="btn-group" default="0"
+					label="Material Design"
+					description="Enable Material Design">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<!-- SASS-->
 				<field name="compile_sass" type="radio" class="btn-group" default="0"
 					label="Compile Sass"
 					description="Do you want to enable Sass compilation)">
