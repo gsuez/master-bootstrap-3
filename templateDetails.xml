@@ -31,11 +31,11 @@
 		<filename>templateDetails.xml</filename>
 	</files>
     <positions>
-		<position>top</position>
-		<position>navigation</position>
-		<position>fullwidth</position>
+	<position>top</position>
+	<position>navigation</position>
+	<position>fullwidth</position>
         <position>showcase</position>
-		<position>feature</position>
+	<position>feature</position>
         <position>breadcrumbs</position>
         <position>left</position>
         <position>right</position>
@@ -44,7 +44,8 @@
         <position>bottom</position>
         <position>footer</position>
         <position>copy</position>
-		<position>debug</position>
+        <position>panelnav</position>
+	<position>debug</position>
 	</positions>
 	<config>
 		<fields name="params">
