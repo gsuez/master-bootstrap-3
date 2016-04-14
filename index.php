@@ -153,7 +153,7 @@ if ($params->get('compile_sass', '0') === '1')
 			// show on all pages but the default page
 			?>
 <div id="main-box">
-<jdoc:include type="message" />
+<jdoc:include type="component" />
 </div>
 <?php
  }} ?>
