@@ -195,6 +195,18 @@ class FileCompiler
 
 		foreach ($dependencies as $file => $fileUpdateTime)
 		{
+			if (!file_exists($file))
+			{
+				return true;
+			}
+
+			$overridenFile = $this->getOverridenFile($file);
+
+			if ($overridenFile)
+			{
+				$file = $overridenFile;
+			}
+
 			$currentFileTime = filemtime($file);
 
 			if ($currentFileTime !== $fileUpdateTime || $currentFileTime > $destFileTime)
@@ -232,6 +244,31 @@ class FileCompiler
 		}
 
 		return $this->compiler;
+	}
+
+	/**
+	 * Check if a Sass file has an override.
+	 *
+	 * @param   string  $file  Path to the source file to search for overrides
+	 *
+	 * @return  string
+	 */
+	private function getOverridenFile($file)
+	{
+		if (!file_exists($file))
+		{
+			return null;
+		}
+
+		$overridenFileName = ltrim(basename($file), '_');
+		$overridenFile = dirname($file) . '/' . $overridenFileName;
+
+		if ($overridenFileName === basename($file) || !file_exists($overridenFile))
+		{
+			return null;
+		}
+
+		return $overridenFile;
 	}
 
 	/**
