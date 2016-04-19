@@ -29,8 +29,8 @@ Roberto Segura and Waseem Sadiq for tweaks</strong></p>
 
 <h4>Support</h4>
 <p><a href="http://groups.google.com/group/master-bootstrap/subscribe" target="_blank">Google Group</a></p>
-<h4>How connect Gulp</h4>
-<p>Read information here: <a href="https://github.com/gsuez/master-bootstrap-3/pull/18"target="_blank">Add Gulp build system</a></p>
+<h4>Integrated Gulp build system</h4>
+<p><a href="./docs/gulp.md">Read information here</a></p>
 <h4>SASS</h4>
 <p>Read information here: <a href="https://github.com/gsuez/master-bootstrap-3/pull/17"target="_blank">Integrate Sass compiler</a></p>
 <h2>New Feature Master Bootstrap v. 1.2.2</h2>
@@ -42,7 +42,7 @@ Roberto Segura and Waseem Sadiq for tweaks</strong></p>
   <li>And much more...</li>
 </ul>
 <p>Special Thanks to:</p>
-<h4><a href="http://phproberto.com/es/sobre-mi" target="_blank">Roberto Segura</a> for add SASS. Thanks you for supporting this project!!!</h4>
+<h4><a href="http://phproberto.com" target="_blank">Roberto Segura</a> for adding SASS. Thanks you for supporting this project!!!</h4>
 <h2>New Feature Master Bootstrap v. 1.2.1</h2>
 <ul>
   <li>New: Add Font Awesome icon in module title </li>
