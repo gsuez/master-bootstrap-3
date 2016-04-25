@@ -19,29 +19,10 @@
 	// Include all compiled plugins (below), or include individual files as needed
 	$doc->addScript('templates/' . $this->template . '/js/holder.js');
 	$doc->addScript('templates/' . $this->template . '/js/headroom.min.js');
-	//$doc->addScript('templates/' . $this->template . '/js/material.min.js');
-	//$doc->addScript('templates/' . $this->template . '/js/jquery.mmenu.min.all.js');
-	//$doc->addScript('templates/' . $this->template . '/js/dropdown.js');
-	//$doc->addScript('templates/' . $this->template . '/js/bootswatch.js');
-	//$doc->addScript('templates/' . $this->template . '/js/tooltip.js');
-	//$doc->addScript('templates/' . $this->template . '/js/popover.js');
-	//$doc->addScript('templates/' . $this->template . '/js/modal.js');
 	// Add Stylesheets
+	$doc->addStyleSheet('templates/' . $this->template . '/css/bootstrap.min.css');
 	$doc->addStyleSheet('templates/' . $this->template . '/css/icons.css');
 	$doc->addStyleSheet('templates/' . $this->template . '/css/template.min.css');
-	//$doc->addStyleSheet('templates/' . $this->template . '/css/material.min.css');
-	// Disable mootools
-	//unset($doc->_scripts[JURI::root(true) . '/media/system/js/mootools-more.js']);
-	//unset($doc->_scripts[JURI::root(true) . '/media/system/js/mootools-core.js']);
-	//unset($doc->_scripts[JURI::root(true) . '/media/system/js/modal.js']);
-	//unset($doc->_scripts[JURI::root(true) . '/media/system/js/caption.js']);
-	// Add bootswatch styles
-	$style = $this->params->get('style');
-	if (!empty($style)){
-		$doc->addStyleSheet('templates/' . $this->template . '/css/' . $style . '/bootstrap.min.css');
-	} else {
-		$doc->addStyleSheet('templates/' . $this->template . '/css/bootstrap.min.css');
-	}
 	// Variables
 	$headdata = $doc->getHeadData();
 	$menu = $app->getMenu();
