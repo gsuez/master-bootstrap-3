@@ -71,29 +71,29 @@
 				<field name="modernizr" type="radio" class="btn-group" default="0"
 					label="Modernizr"
 					description="Enable JavaScript modernizr.js in head">
-					<option value="0">JNO</option>
 					<option value="1">JYES</option>
+					<option value="0">JNO</option>
 				</field>
 				<!-- FONT-AWESOME -->
 				<field name="fontawesome" type="radio" class="btn-group" default="0"
 					label="Font Awesome"
 					description="Enable Font Awesome for better icons in Bootstrap">
-					<option value="0">JNO</option>
 					<option value="1">JYES</option>
+					<option value="0">JNO</option>
 				</field>
 				<!-- PIE-->
 				<field name="pie" type="radio" class="btn-group" default="0"
 					label="PIE"
 					description="Enable PIE (CSS3 for IE 9+8)">
-					<option value="0">JNO</option>
 					<option value="1">JYES</option>
+					<option value="0">JNO</option>
 				</field>
 				<!-- MATERIAL DESIGN-->
 				<field name="materialdesign" type="radio" class="btn-group" default="0"
 					label="Material Design"
 					description="Enable Material Design">
-					<option value="0">JNO</option>
 					<option value="1">JYES</option>
+					<option value="0">JNO</option>
 				</field>
 				<!-- SASS-->
 				<field name="compile_sass" type="radio" class="btn-group" default="0"
