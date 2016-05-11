@@ -13,6 +13,7 @@ New: SASS compiler option
 New: Boxed or Wide layout design?
 New: in Boxed layout, pattern options
 New: Material Design, ready for use!!!
+New: Gulp build system
 And much more...
 
 
