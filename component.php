@@ -10,6 +10,9 @@ defined('_JEXEC') or die;
 $app   = JFactory::getApplication();
 $doc   = JFactory::getDocument();
 // Add Stylesheets
+$doc->addStyleSheet('templates/' . $this->template . '/css/bootstrap.min.css');
+$doc->addStyleSheet('templates/' . $this->template . '/css/icons.css');
+$doc->addStyleSheet('templates/' . $this->template . '/css/editor-modal.css');
 $doc->addStyleSheet('templates/'.$this->template.'/css/template.css');
 ?>
 <!DOCTYPE html>
