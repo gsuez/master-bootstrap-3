@@ -6,7 +6,6 @@
 # Website   http://www.gsuez.cl
 -------------------------------------------------------------------------*/// no direct access
 defined('_JEXEC') or die;
-JHtml::_('bootstrap.framework');
 ?>
 <head>
 	<jdoc:include type="head" />

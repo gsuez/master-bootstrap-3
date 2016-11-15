@@ -23,6 +23,7 @@
 		<folder>js</folder>
 		<folder>scss</folder>
 		<folder>vendor</folder>
+		<folder>blocks</folder>		
 		<filename>component.php</filename>
 		<filename>error.php</filename>
 		<filename>index.php</filename>
