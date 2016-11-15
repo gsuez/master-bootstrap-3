@@ -1,0 +1,6 @@
+{
+	"wwwDir"           : "/home/zinadore/code/php/bookbook/public/mobile_version",
+	"browserConfig" : {
+		"proxy" : "m.joomla.box"
+	}
+}
