@@ -40,5 +40,8 @@
     "joomla-gulp": "^1.1.1",
     "require-dir": "^0.3.0",
     "xml2js": "^0.4.16"
+  },
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
   }
 }

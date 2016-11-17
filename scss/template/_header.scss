@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid black;
+  width: 100%;
+
+  button {
+    border-radius: 0!important;
+  }
+
+  span {
+    flex: 1;
+  }
+
+  .right-menu {
+    display: flex;
+    flex-direction: row;
+
+    a {
+      color: black;
+      padding: 5px;
+      font-size: 1.8em;
+    }
+
+  }
+}

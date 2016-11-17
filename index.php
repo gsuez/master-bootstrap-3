@@ -10,14 +10,21 @@ defined('_JEXEC') or die;
 include 'includes/unseting.php';
 
 include 'includes/params.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php
  include 'includes/head.php'; ?>
 <body>
+  <div id="wrapper" class="wrapper">
+    <?php include 'blocks/sidenav.php'; ?>
 
-  <?php include 'blocks/header.php'; ?>
+    <div id="page-content-wrapper">
+      <?php include 'blocks/header.php'; ?>
+    </div>
+  </div>
+
 
 
 <jdoc:include type="modules" name="debug" />
