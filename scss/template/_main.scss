@@ -1,3 +1,7 @@
 html {
 	font-size: 16px;
 }
+
+div.blog-featured img {
+	@extend .img-responsive;
+}

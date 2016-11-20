@@ -1085,7 +1085,7 @@ figure {
 img {
   vertical-align: middle; }
 
-.img-responsive {
+.img-responsive, div.blog-featured img {
   display: block;
   max-width: 100%;
   height: auto; }
