@@ -5,3 +5,7 @@ html {
 div.blog-featured img {
 	@extend .img-responsive;
 }
+
+p.readmore > a {
+	white-space: normal;
+}

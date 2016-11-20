@@ -23,7 +23,14 @@ include 'includes/params.php';
     <div id="page-content-wrapper">
       <?php include 'blocks/header.php'; ?>
 
-      <jdoc:include type="component" /> <!-- main content -->
+      <!-- wrapper for the main, unique content for each page -->
+      <main class="container"> 
+	      <jdoc:include type="component" /> <!-- main content -->
+
+	      <jdoc:include type="modules" name="editorsChoise" /> <!--replace with our own-->
+	      <jdoc:include type="modules" name="mostVisitedArticle" /> <!--replace with our own-->
+	  </main>
+
     </div>
   </div>
 

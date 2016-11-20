@@ -5944,3 +5944,6 @@ header {
 
 html {
   font-size: 16px; }
+
+p.readmore > a {
+  white-space: normal; }
