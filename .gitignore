@@ -215,6 +215,6 @@ pip-log.txt
 .mr.developer.cfg
 
 # Gulp
-/gulp-config.json
+#/gulp-config.json
 /node_modules
 /releases

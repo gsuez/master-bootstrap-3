@@ -1,16 +1,9 @@
-/*!
- * Master Bootstrap3 (http://www.masterbootstrap.com)
- * Copyright 2013-20156 gsuez.cl.
- * Licensed under GPL v2 (http://www.gnu.org/licenses/gpl-2.0.html)
- */
+@import "bootstrap";
 
 // Variables
 @import "template/variables";
 
-// Template elements
+// User Imports
+@import "template/sidenav";
+@import "template/header";
 @import "template/main";
-@import "template/forms";
-@import "template/chosen";
-
-// User customisations
-@import "template/custom";

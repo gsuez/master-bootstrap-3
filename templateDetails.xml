@@ -23,6 +23,7 @@
 		<folder>js</folder>
 		<folder>scss</folder>
 		<folder>vendor</folder>
+		<folder>blocks</folder>
 		<filename>component.php</filename>
 		<filename>error.php</filename>
 		<filename>index.php</filename>
@@ -31,21 +32,8 @@
 		<filename>templateDetails.xml</filename>
 	</files>
     <positions>
-	<position>top</position>
-	<position>navigation</position>
-	<position>fullwidth</position>
-        <position>showcase</position>
-	<position>feature</position>
-        <position>breadcrumbs</position>
-        <position>left</position>
-        <position>right</position>
-        <position>content-top</position>
-        <position>content-bottom</position>
-        <position>bottom</position>
-        <position>footer</position>
-        <position>copy</position>
-        <position>panelnav</position>
-	<position>debug</position>
+		<position>sidenav-menu</position>
+		<position>debug</position>
 	</positions>
 	<config>
 		<fields name="params">

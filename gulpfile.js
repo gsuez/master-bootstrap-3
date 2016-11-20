@@ -20,7 +20,7 @@ var parser      = new xml2js.Parser();
 
 var extPath      = '.';
 var assetsPath = '.';
-var templateName = 'masterbootstrap';
+var templateName = 'bookbookmobile';
 
 var wwwPath = config.wwwDir + '/templates/' + templateName;
 
@@ -30,6 +30,7 @@ var templateFiles = [
 	extPath + '/html/**',
 	extPath + '/images/**',
 	extPath + '/includes/**',
+	extPath + '/blocks/**',
 	extPath + '/js/**',
 	extPath + '/scss/**',
 	extPath + '/vendor/**',
@@ -181,4 +182,3 @@ gulp.task('release', function (cb) {
 // Default task
 gulp.task('default', ['copy', 'watch', 'browser-sync'], function() {
 });
-

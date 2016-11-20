@@ -1,0 +1,38 @@
+header {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid black;
+  width: 100%;
+
+  #menu-toggle {
+    border: 0;
+    background-color: white;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;    
+
+    i.fa-bars {
+      font-size: 1.8rem;
+    }    
+  }
+
+  button {
+    border-radius: 0!important;
+  }
+
+  span {
+    flex: 1;
+  }
+
+  .right-menu {
+    display: flex;
+    flex-direction: row;
+
+    a {
+      color: black;
+      padding: 5px;
+      font-size: 1.8em;
+    }
+
+  }
+}
