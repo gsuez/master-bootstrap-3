@@ -5913,6 +5913,17 @@ body {
     position: relative;
     margin-right: 0; } }
 
+.sidebar-dropdown-menu {
+  list-style-type: none;
+  background-color: #1a1a1a;
+  padding-left: 0.8em;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: max-height 350ms ease-in-out; }
+  .sidebar-dropdown-menu.open {
+    max-height: 100%;
+    overflow-y: visible; }
+
 header {
   display: flex;
   flex-direction: row;

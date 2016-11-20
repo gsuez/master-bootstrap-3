@@ -1,7 +1,7 @@
 <?php
   defined('_JEXEC') or die; ?>
 
-<div id="sidebar-wrapper">
+<nav id="sidebar-wrapper">
     <ul class="sidebar-nav">
         <li class="sidebar-brand">
             <a href="<?php echo JUri::base() ?>" title="<?php echo strip_tags($sitename) ?>">
@@ -12,4 +12,4 @@
           <jdoc:include type="modules" name="sidenav-menu" />
         <?php endif ?>
     </ul>
-</div>
+</nav>
