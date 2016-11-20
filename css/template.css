@@ -5953,5 +5953,12 @@ header {
 html {
   font-size: 16px; }
 
+div.blog-featured img {
+  width: 100%; }
+
 p.readmore > a {
-  white-space: normal; }
+  white-space: normal;
+  font-size: 1rem;
+  text-align: initial;
+  border: 0;
+  padding: 0; }

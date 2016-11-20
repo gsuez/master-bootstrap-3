@@ -4,8 +4,14 @@ html {
 
 div.blog-featured img {
 	@extend .img-responsive;
+
+	width: 100%;
 }
 
 p.readmore > a {
 	white-space: normal;
+	font-size: 1rem;
+	text-align: initial;
+    border: 0;
+    padding: 0;
 }
