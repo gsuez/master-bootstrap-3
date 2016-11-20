@@ -5917,7 +5917,8 @@ body {
   list-style-type: none;
   background-color: #1a1a1a;
   padding-left: 0.8em;
-  max-height: 0;
+  height: 100%;
+  max-height: 0%;
   overflow-y: hidden;
   transition: max-height 350ms ease-in-out; }
   .sidebar-dropdown-menu.open {
@@ -5940,3 +5941,6 @@ header {
       color: black;
       padding: 5px;
       font-size: 1.8em; }
+
+html {
+  font-size: 16px; }

@@ -23,7 +23,7 @@ include 'includes/params.php';
     <div id="page-content-wrapper">
       <?php include 'blocks/header.php'; ?>
 
-      <jdoc:include type="component" /
+      <jdoc:include type="component" /> <!-- main content -->
     </div>
   </div>
 
