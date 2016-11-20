@@ -5930,6 +5930,14 @@ header {
   flex-direction: row;
   border-bottom: 1px solid black;
   width: 100%; }
+  header #menu-toggle {
+    border: 0;
+    background-color: white;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+    header #menu-toggle i.fa-bars {
+      font-size: 1.8rem; }
   header button {
     border-radius: 0 !important; }
   header span {

@@ -4,6 +4,18 @@ header {
   border-bottom: 1px solid black;
   width: 100%;
 
+  #menu-toggle {
+    border: 0;
+    background-color: white;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;    
+
+    i.fa-bars {
+      font-size: 1.8rem;
+    }    
+  }
+
   button {
     border-radius: 0!important;
   }
