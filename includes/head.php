@@ -16,7 +16,7 @@ JHtml::_('bootstrap.framework');
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php  echo $tpath; ?>/images/apple-touch-icon-114x114-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php  echo $tpath; ?>/images/apple-touch-icon-144x144-precomposed.png">
 	<!--[if lte IE 8]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
 		<?php  if ($pie == 1) : ?>
 			<style>
 				{behavior:url(<?php  echo $tpath; ?>/js/PIE.htc);}

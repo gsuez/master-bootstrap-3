@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
-<extension version="2.5" type="template" method="upgrade">
+<extension version="3.5" type="template" method="upgrade">
 	<name>Master Bootstrap</name>
 	<creationDate>05 APR 2016</creationDate>
 	<author>Gonzalo Suez</author>
@@ -71,29 +71,29 @@
 				<field name="modernizr" type="radio" class="btn-group" default="0"
 					label="Modernizr"
 					description="Enable JavaScript modernizr.js in head">
-					<option value="0">JNO</option>
 					<option value="1">JYES</option>
+					<option value="0">JNO</option>
 				</field>
 				<!-- FONT-AWESOME -->
 				<field name="fontawesome" type="radio" class="btn-group" default="0"
 					label="Font Awesome"
 					description="Enable Font Awesome for better icons in Bootstrap">
-					<option value="0">JNO</option>
 					<option value="1">JYES</option>
+					<option value="0">JNO</option>
 				</field>
 				<!-- PIE-->
 				<field name="pie" type="radio" class="btn-group" default="0"
 					label="PIE"
 					description="Enable PIE (CSS3 for IE 9+8)">
-					<option value="0">JNO</option>
 					<option value="1">JYES</option>
+					<option value="0">JNO</option>
 				</field>
 				<!-- MATERIAL DESIGN-->
 				<field name="materialdesign" type="radio" class="btn-group" default="0"
 					label="Material Design"
 					description="Enable Material Design">
-					<option value="0">JNO</option>
 					<option value="1">JYES</option>
+					<option value="0">JNO</option>
 				</field>
 				<!-- SASS-->
 				<field name="compile_sass" type="radio" class="btn-group" default="0"
