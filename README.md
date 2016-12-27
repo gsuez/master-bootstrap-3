@@ -33,6 +33,14 @@ Roberto Segura and Waseem Sadiq for tweaks</strong></p>
 <p><a href="./docs/gulp.md">Read information here</a></p>
 <h4>SASS</h4>
 <p>Read information here: <a href="https://github.com/gsuez/master-bootstrap-3/pull/17"target="_blank">Integrate Sass compiler</a></p>
+<h2>Changelog Master Bootstrap v. 1.2.3</h2>
+<ul>
+  <li>Code W3C Valid!</li>
+  <li>Update to Bootstrap 3.3.7</li>
+  <li>Minor improvements</li>
+</ul>
+<p>Special Thanks to:</p>
+<h4>Jan Krzywanek and Aleksander Kuczek from <a href="https://perfectdashboard.com" target="_blank">Perfect Web</a>. Thanks you for supporting this project!!!</h4>
 <h2>New Feature Master Bootstrap v. 1.2.2</h2>
 <ul>
   <li>New: SASS compiler option</li>
