@@ -6,14 +6,11 @@
 # Website http://www.gsuez.cl
 -------------------------------------------------------------------------*/	// no direct access
 defined('_JEXEC') or die;
-
 include 'includes/params.php';
-
 if ($params->get('compile_sass', '0') === '1')
 {
 	require_once "includes/sass.php";
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,17 +19,11 @@ if ($params->get('compile_sass', '0') === '1')
 <body>
 <?php
  if($layout=='boxed'){ ?>
-<?php  $path= JURI::base().'templates/'.$this->template."/images/elements/pattern".$pattern.".png"; ?>
-<style type="text/css">
- body {
-    background: url("<?php  echo $path ; ?>") repeat fixed center top rgba(0, 0, 0, 0);
- }
-</style>
 <div class="layout-boxed">
   <?php  } ?>
 <div id="wrap">
 <!--Navigation-->
-<header id="header" class="header header--fixed hide-from-print" role="banner">
+<header id="header" class="header header--fixed hide-from-print" >
 <!--top-->
 <?php  if($this->countModules('top')) : ?>
 <div id="top" class="navbar-inverse">
@@ -45,7 +36,7 @@ if ($params->get('compile_sass', '0') === '1')
 <?php  endif; ?>
 <!--top-->
 <div id="navigation">
-<div class="navbar navbar-default" role="navigation">
+<div class="navbar navbar-default">
 <div class="container">
 <div class="navbar-header">
 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -62,13 +53,13 @@ if ($params->get('compile_sass', '0') === '1')
 </div>
 <div class="navbar-collapse collapse">
 <?php  if ($this->countModules('navigation')) : ?>
-                        <nav class="navigation" role="navigation">
+                        <nav class="navigation">
                                 <jdoc:include type="modules" name="navigation" style="none" />
                         </nav>
                         <?php  endif; ?>
 </div>
 </div>
-</div>
+</div></div>
 </header>
 <div class="clearfix"></div>
 <!--Navigation-->
@@ -138,7 +129,6 @@ if ($params->get('compile_sass', '0') === '1')
 <?php
 	$app = JFactory::getApplication();
 	$menu = $app->getMenu();
-
 	if ($frontpageshow){
 		// show on all pages
 		?>
@@ -148,7 +138,6 @@ if ($params->get('compile_sass', '0') === '1')
 </div>
 <?php
 	} else {
-
 		if ($menu->getActive() !== $menu->getDefault()) {
 			// show on all pages but the default page
 			?>
@@ -208,9 +197,7 @@ if ($params->get('compile_sass', '0') === '1')
 </div>
 </div>
 </div>
-</div>
 <?php  endif; ?>
-</div>
 <!-- copy -->
 <!-- menu slide -->
 <?php  if($this->countModules('panelnav')): ?>
@@ -221,7 +208,11 @@ if ($params->get('compile_sass', '0') === '1')
 <!-- menu slide -->
 <a href="#" class="back-to-top">Back to Top</a>
 <jdoc:include type="modules" name="debug" />
-</section>
+</section></div>
+<?php
+ if($layout=='boxed'){ ?>
+</div>
+  <?php  } ?>
 <!-- page -->
 <!-- JS -->
 <script type="text/javascript" src="<?php echo $tpath; ?>/js/template.min.js"></script>

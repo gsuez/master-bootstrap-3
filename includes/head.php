@@ -10,17 +10,22 @@ JHtml::_('bootstrap.framework');
 ?>
 <head>
 	<jdoc:include type="head" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-	<link rel="apple-touch-icon-precomposed" href="<?php  echo $tpath; ?>/images/apple-touch-icon-57x57-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php  echo $tpath; ?>/images/apple-touch-icon-72x72-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php  echo $tpath; ?>/images/apple-touch-icon-114x114-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php  echo $tpath; ?>/images/apple-touch-icon-144x144-precomposed.png">
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 	<!--[if lte IE 8]>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<?php  if ($pie == 1) : ?>
 			<style>
 				{behavior:url(<?php  echo $tpath; ?>/js/PIE.htc);}
 			</style>
 		<?php  endif; ?>
 	<![endif]-->
+<?php
+ if($layout=='boxed'){ ?>
+<?php  $path= JURI::base().'templates/'.$this->template."/images/elements/pattern".$pattern.".png"; ?>
+<style type="text/css">
+ body {
+    background: url("<?php  echo $path ; ?>") repeat fixed center top rgba(0, 0, 0, 0);
+ }
+</style>
+  <?php  } ?>
 </head>
