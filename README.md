@@ -2,7 +2,7 @@ Master Bootstrap
 =======================
 Created by Gonzalo Suez. See the official site for more info: http://www.masterbootstrap.com
 
-This template is based in Twitter Bootstrap 3, for Joomla! 3.x. 
+This template is based on Twitter Bootstrap 3, for Joomla! 3.x. 
 
 <h3>Some features:</h3>
 <ul>
