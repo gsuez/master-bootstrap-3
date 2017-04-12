@@ -4,21 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a9ab196d7cc8ba44744d3704b6dfbc1c",
-    "content-hash": "102fcc49018e4c6b2538c506deb35244",
+    "content-hash": "938b03896018b462bacc54ab204f89dc",
     "packages": [
         {
             "name": "leafo/scssphp",
-            "version": "v0.6.3",
+            "version": "v0.6.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/leafo/scssphp.git",
-                "reference": "a27edad3d16635a222d7204706572e24c338aa17"
+                "reference": "562213cd803e42ea53b0735554794c4022d8db89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/leafo/scssphp/zipball/a27edad3d16635a222d7204706572e24c338aa17",
-                "reference": "a27edad3d16635a222d7204706572e24c338aa17",
+                "url": "https://api.github.com/repos/leafo/scssphp/zipball/562213cd803e42ea53b0735554794c4022d8db89",
+                "reference": "562213cd803e42ea53b0735554794c4022d8db89",
                 "shasum": ""
             },
             "require": {
@@ -58,7 +57,7 @@
                 "scss",
                 "stylesheet"
             ],
-            "time": "2016-01-15 02:50:06"
+            "time": "2017-02-23T05:07:33+00:00"
         }
     ],
     "packages-dev": [],

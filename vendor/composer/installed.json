@@ -1,17 +1,17 @@
 [
     {
         "name": "leafo/scssphp",
-        "version": "v0.6.3",
-        "version_normalized": "0.6.3.0",
+        "version": "v0.6.7",
+        "version_normalized": "0.6.7.0",
         "source": {
             "type": "git",
             "url": "https://github.com/leafo/scssphp.git",
-            "reference": "a27edad3d16635a222d7204706572e24c338aa17"
+            "reference": "562213cd803e42ea53b0735554794c4022d8db89"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/leafo/scssphp/zipball/a27edad3d16635a222d7204706572e24c338aa17",
-            "reference": "a27edad3d16635a222d7204706572e24c338aa17",
+            "url": "https://api.github.com/repos/leafo/scssphp/zipball/562213cd803e42ea53b0735554794c4022d8db89",
+            "reference": "562213cd803e42ea53b0735554794c4022d8db89",
             "shasum": ""
         },
         "require": {
@@ -22,7 +22,7 @@
             "phpunit/phpunit": "~3.7",
             "squizlabs/php_codesniffer": "~2.5"
         },
-        "time": "2016-01-15 02:50:06",
+        "time": "2017-02-23T05:07:33+00:00",
         "bin": [
             "bin/pscss"
         ],
