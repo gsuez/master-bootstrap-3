@@ -1,6 +1,6 @@
 {
     "require": {
-        "leafo/scssphp": "^0.6.3"
+        "leafo/scssphp": "^0.6.7"
     },
     "autoload": {
         "psr-4": {
