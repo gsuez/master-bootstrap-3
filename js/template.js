@@ -1,15 +1,3 @@
-// Fix hide dropdown
-if (typeof MooTools != 'undefined') {
-	var mHide = Element.prototype.hide;
-	Element.implement({
-		hide: function() {
-				if (this.hasClass("deeper")) {
-					return this;
-				}
-				mHide.apply(this, arguments);
-			}
-	});
-}
 (function($){
 	$(document).ready(function () {
 		// Dropdown menu
@@ -49,5 +37,22 @@ headroom.init();
 			$('html, body').animate({scrollTop: 0}, duration);
 			return false;
 		});
+
+		// Fix mootools hide
+		var bootstrapLoaded = (typeof $().carousel == 'function');
+		var mootoolsLoaded = (typeof MooTools != 'undefined');
+		if (bootstrapLoaded && mootoolsLoaded) {
+			Element.implement({
+				hide: function () {
+					return this;
+				},
+				show: function (v) {
+					return this;
+				},
+				slide: function (v) {
+					return this;
+				}
+			});
+		}
 	});
 })(jQuery);
