@@ -33,6 +33,16 @@ Roberto Segura and Waseem Sadiq for tweaks</strong></p>
 <p><a href="./docs/gulp.md">Read information here</a></p>
 <h4>SASS</h4>
 <p>Read information here: <a href="https://github.com/gsuez/master-bootstrap-3/pull/17"target="_blank">Integrate Sass compiler</a></p>
+
+<h2>Changelog Master Bootstrap v. 1.2.4</h2>
+<ul>
+  <li>Add Google Fonts in admin panel</li>
+  <li>update scssphp to v0.6.7</li>
+  <li>Minor fixes</li>
+</ul>
+<p>Special Thanks to:</p>
+<h4><a href="http://phproberto.com" target="_blank">Roberto Segura</a> for update scssphp.</h4>
+
 <h2>Changelog Master Bootstrap v. 1.2.3</h2>
 <ul>
   <li>Code W3C Valid!</li>
