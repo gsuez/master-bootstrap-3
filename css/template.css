@@ -481,3 +481,24 @@ div#jform_tags_chzn.chzn-container {
 
 .chzn-container .chzn-drop {
   width: 100px; }
+/*14-04-2017*/
+.input-append .add-on, .input-prepend .add-on {
+    display: inline-block;
+    width: auto;
+    height: 18px;
+    min-width: 16px;
+    padding: 4px 5px;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
+    background-color: #eee;
+    border: 1px solid #ccc;
+}
+.input-small {
+    width: 90px;
+}
+.btn.modal {
+    background: #eee;
+}

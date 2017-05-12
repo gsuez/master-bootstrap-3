@@ -57,3 +57,30 @@
 	if ($materialdesign == 1){
 	$doc->addStyleSheet($tpath . '/css/material.min.css');
 	}
+// Use of Google Font
+if ($this->params->get('googleFont'))
+{
+	JHtml::_('stylesheet', '//fonts.googleapis.com/css?family=' . $this->params->get('googleFontName'));
+	$this->addStyleDeclaration("
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: '" . str_replace('+', ' ', $this->params->get('googleFontName')) . "', sans-serif;
+	}");
+}
+//Body Font
+if( $this->params->get('bodyFont') ) 
+{
+    	JHtml::_('stylesheet', '//fonts.googleapis.com/css?family=' . $this->params->get('bodyFontName'));
+		$this->addStyleDeclaration("
+			body {
+		font-family: '" . str_replace('+', ' ', $this->params->get('bodyFontName')) . "', sans-serif;
+	}");
+}
+//Navigation Font
+if( $this->params->get('navigationFont') ) 
+{
+    	JHtml::_('stylesheet', '//fonts.googleapis.com/css?family=' . $this->params->get('navigationFontname'));
+		$this->addStyleDeclaration("
+			nav {
+		font-family: '" . str_replace('+', ' ', $this->params->get('navigationFontname')) . "', sans-serif;
+	}");
+}
