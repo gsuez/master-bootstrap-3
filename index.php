@@ -13,7 +13,7 @@ if ($params->get('compile_sass', '0') === '1')
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo $this->language; ?>">
 <?php
  include 'includes/head.php'; ?>
 <body>
