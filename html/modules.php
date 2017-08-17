@@ -29,7 +29,7 @@ function modChrome_block($module, &$params, &$attribs)
            	<div class="moduletable">           	
 	           	<?php if ($module->showtitle != 0) : ?>
 			<div class="module-title">
-	                		<h3 class="title"><span class="<?php echo $params->get('header_class'); ?>" ></span><?php echo $module->title ; ?></h3>
+	                		<<?php echo $params->get('header_tag'); ?> class="title"><span class="<?php echo $params->get('header_class'); ?>" ></span><?php echo $module->title ; ?></<?php echo $params->get('header_tag'); ?>>
 			</div>
 	                	<?php endif; ?>
 	                	<div class="module-content">
@@ -46,7 +46,7 @@ function modChrome_block($module, &$params, &$attribs)
            	<div class="moduletable">           	
 	           	<?php  if ($module->showtitle != 0) : ?>
 			<div class="module-title">
-	                		<h3 class="title"><span class="<?php echo $params->get('header_class'); ?>" ></span><?php echo $module->title ; ?></h3>
+	                		<<?php echo $params->get('header_tag'); ?> class="title"><span class="<?php echo $params->get('header_class'); ?>" ></span><?php echo $module->title ; ?></<?php echo $params->get('header_tag'); ?>>
                             			<div class="title-line"> <span></span> </div>
 			</div>
 	                	<?php  endif; ?>
