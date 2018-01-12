@@ -29,7 +29,7 @@ function modChrome_block($module, &$params, &$attribs)
            	<div class="moduletable">           	
 	           	<?php if ($module->showtitle != 0) : ?>
 			<div class="module-title">
-	                		<h3 class="title"><span class="<?php echo $params->get('header_class'); ?>" ></span><?php echo $module->title ; ?></h3>
+	                		<<?php echo $params->get('header_tag'); ?> class="title"><span class="<?php echo $params->get('header_class'); ?>" ></span><?php echo $module->title ; ?></<?php echo $params->get('header_tag'); ?>>
 			</div>
 	                	<?php endif; ?>
 	                	<div class="module-content">
@@ -40,21 +40,27 @@ function modChrome_block($module, &$params, &$attribs)
 	<?php endif;
 }
 	function modChrome_MBstyle($module, &$params, &$attribs){
-		if (!empty ($module->content)) :
-		?>
-           <div class="MBstyle <?php  if ($params->get('moduleclass_sfx')!='') : ?><?php  echo $params->get('moduleclass_sfx'); ?><?php  endif; ?>">
-           	<div class="moduletable">           	
-	           	<?php  if ($module->showtitle != 0) : ?>
-			<div class="module-title">
-	                		<h3 class="title"><span class="<?php echo $params->get('header_class'); ?>" ></span><?php echo $module->title ; ?></h3>
-                            			<div class="title-line"> <span></span> </div>
-			</div>
-	                	<?php  endif; ?>
+			$headerTag    = htmlspecialchars($params->get('header_tag', 'h3'), ENT_COMPAT, 'UTF-8');
+			$headerClass  = $params->get('header_class');
+				if (!empty ($module->content)) :
+				?>
+			           <div class="MBstyle <?php  if ($params->get('moduleclass_sfx')!='') : ?><?php  echo $params->get('moduleclass_sfx'); ?><?php  endif; ?>">
+			           	<div class="moduletable">           	
+				     <?php  if ($module->showtitle != 0) : ?>
+						<div class="module-title <?php echo $params->get('header_class'); ?>">
+					<?php echo
+	                		'<' . $headerTag . ' class="title">' . $module->title . '</' . $headerTag . '>'
+						?>
+			           	 <div class="title-line"> 
+						<span></span> 
+					</div>
+				  </div>
+				    <?php  endif; ?>
 	                	<div class="module-content">
-	                		<?php  echo $module->content; ?>
+	                <?php  echo $module->content; ?>
 	                	</div>
-              </div>             	
-           </div>
+		              </div>             	
+		           </div>
 	<?php 
 		endif;
 	}
