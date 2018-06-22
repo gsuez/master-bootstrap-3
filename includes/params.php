@@ -23,8 +23,6 @@
 	$doc->addStyleSheet('templates/' . $this->template . '/css/bootstrap.min.css');
 	$doc->addStyleSheet('templates/' . $this->template . '/css/icons.css');
 	$doc->addStyleSheet('templates/' . $this->template . '/css/template.min.css');
-    //Add Custom Stylesheet
-    $doc->addStyleSheet('templates/' . $this->template . '/css/user.css');
 	// Variables
 	$headdata = $doc->getHeadData();
 	$menu = $app->getMenu();
