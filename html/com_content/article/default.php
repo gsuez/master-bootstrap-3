@@ -36,23 +36,23 @@ elseif (isset($images->image_fulltext) and !empty($images->image_fulltext))
    }
    else
    {
-   $timage= 'https://brettvachon.com/images/kneel-guitar.jpg';
+   $timage= 'https://www.masterbootstrap.com/images/217x196xprofessortocat-compressor.png.pagespeed.ic.F75ysx_X8Q.webp';
    }
 $doc =& JFactory::getDocument();
 $doc->addCustomTag( '
 <meta name="twitter:title" content="'.$this->escape($this->item->title).'">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@brett_vachon">
-<meta name="twitter:creator" content="brett_vachon">
+<meta name="twitter:site" content="@masterbootstrap">
+<meta name="twitter:creator" content="masterbootstrap">
 <meta name="twitter:url" content="'.str_replace('" ','&quot;',JURI::current()).'">
 <meta name="twitter:description" content="'.strip_tags($this->item->introtext).'">
 <meta name="twitter:image" content="'.$timage.'">
 <meta property="og:title" content="'.$this->escape($this->item->title).'"/>
 <meta property="og:type" content="article"/>
-<meta property="og:email" content="info@brettvachon.com";/>
+<meta property="og:email" content="email@masterbootstrap.com";/>
 <meta property="og:url" content="'.str_replace('" ','&quot;',juri::current()).'">
 <meta property="og:image" content="'.$timage.'"/>
-<meta property="og:site_name" content="Brett Vachon"/>
+<meta property="og:site_name" content="MasterBootStrap"/>
 <meta property="fb:admins" content="xxxxxxxxxxx"/>
 <meta property="og:description" content="'.strip_tags($this->item->introtext).'"/>
 ');
