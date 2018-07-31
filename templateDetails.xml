@@ -141,7 +141,7 @@
 		   <fieldset name="fbopengraph" label="Open Graph">
 			   <field name="twittersite" type="text" default="@masterbootstrap" label="@username of website" description="@username of website" />
 		   		<field name="twittercreator" type="text" default="@masterbootstrap" label="@username of content creator" description="@username of content creator" />
-		   		<field name="ogsitename" type="text" default="MasterBootStrap" label="overall site name" description="Overall site name" />
+		   		<field name="ogsitename" type="text" default="MasterBootStrap" label="Overall site name" description="Overall site name" />
 		   		<field name="FBadmins" type="text" default="USER_ID" label="Facebook Admin Id" description="Facebook Admin Id" />
 			    <field name="FBapp_id" type="text" default="APPID" label="Facebook App Id" description="Facebook App Id" />
       		</fieldset>
