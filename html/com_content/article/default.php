@@ -1,7 +1,5 @@
 <?php
 /**
- * @package     Joomla.Site
- * @subpackage  com_content
  *
  * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
@@ -20,6 +18,11 @@ $canEdit = $params->get('access-edit');
 $user    = JFactory::getUser();
 $info    = $params->get('info_block_position', 0);
 
+//Get some parameters from the template
+$app = JFactory::getApplication();
+$template = $app->getTemplate(true);
+$tparams = $template->params;
+
 // Check if associations are implemented. If they are, define the parameter.
 $assocParam = (JLanguageAssociations::isEnabled() && $params->get('show_associations'));
 JHtml::_('behavior.caption');
@@ -27,34 +30,34 @@ JHtml::_('behavior.caption');
 //Create FB Open Graph and Twitter Cards
 if (isset($images->image_intro) and !empty($images->image_intro))
    {
-   $timage= htmlspecialchars(JURI::root().$images->image_intro); 
+   $timage = htmlspecialchars(JURI::root().$images->image_intro); 
    }
 
 elseif (isset($images->image_fulltext) and !empty($images->image_fulltext))
    {
-   $timage= htmlspecialchars(JURI::root().$images->image_fulltext);
+   $timage = htmlspecialchars(JURI::root().$images->image_fulltext);
    }
    else
    {
-   $timage= 'https://www.masterbootstrap.com/images/217x196xprofessortocat-compressor.png.pagespeed.ic.F75ysx_X8Q.webp';
+   $timage = '';
    }
 $doc =& JFactory::getDocument();
 $doc->addCustomTag( '
 <meta name="twitter:title" content="'.$this->escape($this->item->title).'">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@masterbootstrap">
-<meta name="twitter:creator" content="masterbootstrap">
+<meta name="twitter:site" content="'.$tparams->get('twittersite') .'">
+<meta name="twitter:creator" content="'.$tparams->get('twittercreator') .'">
 <meta name="twitter:url" content="'.str_replace('" ','&quot;',JURI::current()).'">
-<meta name="twitter:description" content="'.strip_tags($this->item->introtext).'">
+<meta name="twitter:description" content="'.mb_strimwidth(strip_tags($this->item->introtext),0,100, " ...").'">
 <meta name="twitter:image" content="'.$timage.'">
-<meta property="og:title" content="'.$this->escape($this->item->title).'"/>
-<meta property="og:type" content="article"/>
-<meta property="og:email" content="email@masterbootstrap.com";/>
-<meta property="og:url" content="'.str_replace('" ','&quot;',juri::current()).'">
-<meta property="og:image" content="'.$timage.'"/>
-<meta property="og:site_name" content="MasterBootStrap"/>
-<meta property="fb:admins" content="xxxxxxxxxxx"/>
-<meta property="og:description" content="'.strip_tags($this->item->introtext).'"/>
+<meta property="og:title" content="'.$this->escape($this->item->title).'" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="'.str_replace('" ','&quot;',juri::current()).'" />
+<meta property="og:image" content="'.$timage.'" />
+<meta property="og:site_name" content="'.$tparams->get('ogsitename') .'"/>
+<meta property="fb:admins" content="'.$tparams->get('FBadmins') .'" />
+<meta property="fb:app_id" content="'.$tparams->get('FBapp_id') .'" />
+<meta property="og:description" content="'.mb_strimwidth(strip_tags($this->item->introtext),0,100, " ...").'" />
 ');
 //End FB Open Graph and Twitter Card 
 
