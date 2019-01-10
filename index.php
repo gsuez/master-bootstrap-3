@@ -95,7 +95,7 @@ if ($params->get('compile_sass', '0') === '1')
 </div>
 <?php  endif; ?>
 <!--Feature-->
-<!--Breadcrum-->
+<!--Breadcrumb-->
 <?php  if($this->countModules('breadcrumbs')) : ?>
 <div id="breadcrumbs">
 <div class="container">
@@ -104,7 +104,7 @@ if ($params->get('compile_sass', '0') === '1')
 </div>
 </div>
 </div>
-<!--Breadcrum-->
+<!--Breadcrumb-->
 <?php  endif; ?>
 <!-- Content -->
 <div class="container">
