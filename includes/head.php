@@ -8,6 +8,12 @@
 defined('_JEXEC') or die;
 JHtml::_('bootstrap.framework');
 ?>
+<?php
+if(is_readable(JPATH_THEMES.'/'.$this->template.'/css/custom.css'))
+{
+	JFactory::getDocument()->addStylesheet(JURI::base().'templates/'.$this->template.'/css/custom.css');
+}
+?>
 <head>
 	<jdoc:include type="head" />
 <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
