@@ -87,7 +87,7 @@
 					<option value="0">JNO</option>
 				</field>
 				<!-- SASS-->
-				<field name="compile_sass" type="radio" class="btn-group" default="0" label="Compile Sass" description="Do you want to enable Sass compilation)">
+				<field name="compile_sass" type="radio" class="btn-group" default="0" label="Compile Sass" description="Do you want to enable Sass compilation?">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
