@@ -215,7 +215,7 @@ if ($params->get('compile_sass', '0') === '1')
   <?php  } ?>
 <!-- page -->
 <!-- JS -->
-<script type="text/javascript" src="<?php echo $tpath; ?>/js/template.min.js"></script>
+<?php $doc->addScript('templates/' . $this->template . '/js/template.min.js'); ?>
 <!-- JS -->
 </body>
 </html>
