@@ -7,6 +7,9 @@
 -------------------------------------------------------------------------*/// no direct access
 defined('_JEXEC') or die;
 JHtml::_('bootstrap.framework');
+// Set HTML5 Document Output - thank you FabrizioG
+$doc = JFactory::getDocument();
+$doc->setHtml5(true);
 ?>
 <?php
 if(is_readable(JPATH_THEMES.'/'.$this->template.'/css/custom.css'))
